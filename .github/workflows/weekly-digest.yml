@@ -1,0 +1,163 @@
+# Weekly Digest Workflow
+# Automatically creates a weekly data review GitHub Issue every Monday at 09:00 CST (01:00 UTC)
+# Can also be triggered manually via workflow_dispatch
+
+name: Weekly Data Review Issue Creator
+
+on:
+  schedule:
+    # Runs at 01:00 UTC every Monday = 09:00 Beijing Time (CST = UTC+8)
+    - cron: '0 1 * * 1'
+  workflow_dispatch:
+    inputs:
+      week_override:
+        description: 'Override week range string (leave blank to auto-calculate)'
+        required: false
+        default: ''
+      assignee_override:
+        description: 'Override assignee GitHub username (leave blank to use default)'
+        required: false
+        default: ''
+
+jobs:
+  create-weekly-review:
+    name: Create Weekly Review Issue
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create Weekly Review Issue
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            // ─── Configuration ────────────────────────────────────────────────
+            // Team members who can be assigned to the weekly review issue.
+            // Update this list with actual GitHub usernames.
+            const TEAM_ASSIGNEES = [
+              '[数据分析师GitHub用户名]',
+              '[内容总监GitHub用户名]',
+            ];
+
+            // GitHub Projects (v2) number for your project board (find in the Projects URL)
+            // e.g. https://github.com/orgs/[org]/projects/1 → project number is 1
+            const PROJECT_NUMBER = [GitHub_Projects_编号];  // Replace with actual number
+
+            // ─── Calculate week range ─────────────────────────────────────────
+            const weekOverride = '${{ github.event.inputs.week_override }}';
+            let weekRange;
+
+            if (weekOverride) {
+              weekRange = weekOverride;
+            } else {
+              const now = new Date();
+              // Adjust to CST (UTC+8)
+              const cst = new Date(now.getTime() + 8 * 60 * 60 * 1000);
+              // Find last Monday (the start of the week being reviewed)
+              const dayOfWeek = cst.getDay(); // 0=Sun, 1=Mon...
+              const daysToLastMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+              const lastMonday = new Date(cst);
+              lastMonday.setDate(cst.getDate() - daysToLastMonday - 7);
+              const lastSunday = new Date(lastMonday);
+              lastSunday.setDate(lastMonday.getDate() + 6);
+
+              const fmt = (d) => d.toISOString().split('T')[0];
+              weekRange = `${fmt(lastMonday)} 至 ${fmt(lastSunday)}`;
+            }
+
+            // ─── Determine assignee ───────────────────────────────────────────
+            const assigneeOverride = '${{ github.event.inputs.assignee_override }}';
+            let assignees = [];
+
+            if (assigneeOverride) {
+              assignees = [assigneeOverride];
+            } else {
+              // Use first available team member from list (first entry = data analyst)
+              const primaryAssignee = TEAM_ASSIGNEES[0];
+              if (primaryAssignee && !primaryAssignee.startsWith('[')) {
+                assignees = [primaryAssignee];
+              }
+            }
+
+            // ─── Issue body ───────────────────────────────────────────────────
+            const issueBody = `## 每周数据复盘 — ${weekRange}
+
+            > 本Issue由 GitHub Actions 自动创建。数据分析师请在**周一中午12:00前**完成数据填写。
+
+            ### 数据拉取确认
+
+            - [ ] 抖音 — 播放量、完播率、点赞、评论、分享、涨粉数
+            - [ ] 小红书 — 浏览量、收藏、点赞、评论、涨粉数
+            - [ ] 微博 — 阅读量、转发、评论、点赞、涨粉数
+            - [ ] B站 — 播放量、弹幕、投币、收藏、涨粉数
+            - [ ] 微信视频号 — 播放量、点赞、分享、涨粉数
+            - [ ] 私域数据 — 社群活跃成员数、本周UGC数量
+
+            ### 各平台数据看板
+
+            > 数据分析师请在此处填写各平台本周数据
+
+            | 平台 | 发布数 | 总曝光 | 净增粉丝 | 最高单内容曝光 |
+            |------|--------|--------|----------|----------------|
+            | 抖音 | | | | |
+            | 小红书 | | | | |
+            | 微博 | | | | |
+            | B站 | | | | |
+            | 微信视频号 | | | | |
+            | **全平台合计** | | | | |
+
+            ### 本周最佳内容
+
+            > 填写本周表现最好的1-3条内容及成功原因分析
+
+            _待填写_
+
+            ### 本周表现不佳内容
+
+            > 填写低于预期的内容及原因分析
+
+            _待填写_
+
+            ### 关键洞察（3-5条）
+
+            1.
+            2.
+            3.
+
+            ### 下周内容优先级建议
+
+            _待填写_
+
+            ### 行动项
+
+            | 行动项 | 负责人 | 截止时间 | 状态 |
+            |--------|--------|----------|------|
+            | | | | 待开始 |
+
+            ---
+            *自动创建时间：${new Date().toISOString()} UTC | 触发方式：${context.eventName}*`;
+
+            // ─── Create the issue ─────────────────────────────────────────────
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[复盘] ${weekRange} 数据周报`,
+              body: issueBody,
+              labels: ['analytics'],
+              assignees: assignees,
+            });
+
+            console.log(`✅ Weekly review issue created: ${issue.data.html_url}`);
+            core.setOutput('issue_url', issue.data.html_url);
+            core.setOutput('issue_number', issue.data.number);
+
+      - name: Log summary
+        if: always()
+        run: |
+          echo "Weekly digest workflow completed."
+          echo "Check the Issues tab for the newly created review issue."

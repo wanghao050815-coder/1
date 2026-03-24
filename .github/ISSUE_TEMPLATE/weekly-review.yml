@@ -1,0 +1,206 @@
+name: 每周数据复盘
+description: 每周一自动或手动创建的数据复盘Issue，用于团队对齐上周表现和下周优先级
+labels: ["analytics"]
+title: "[复盘] [WEEK_RANGE] 数据周报"
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 每周数据复盘
+        本Issue于每周一早9:00自动创建（北京时间）。请数据分析师在 **周一中午12:00前** 完成数据填写，团队在周一下午例会中共同讨论。
+
+        **数据来源**：各平台创作者后台 + [数据分析工具名称]
+        **填写人**：数据分析师（[@数据分析师GitHub用户名]）
+
+  - type: input
+    id: week-range
+    attributes:
+      label: 复盘周期
+      description: 填写本次复盘覆盖的日期范围
+      placeholder: "例：2024-03-11 至 2024-03-17"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: platform-data-pulled
+    attributes:
+      label: 平台数据拉取确认
+      description: 确认已从以下平台获取数据
+      options:
+        - label: "抖音 — 已拉取：播放量、完播率、点赞、评论、分享、涨粉数"
+        - label: "小红书 — 已拉取：浏览量、收藏、点赞、评论、涨粉数"
+        - label: "微博 — 已拉取：阅读量、转发、评论、点赞、涨粉数"
+        - label: "B站 — 已拉取：播放量、弹幕、投币、收藏、涨粉数"
+        - label: "微信视频号 — 已拉取：播放量、点赞、分享、涨粉数"
+        - label: "微信公众号（如有）— 已拉取：阅读量、转发、在看数"
+        - label: "私域（微信社群/企业微信）— 已统计：活跃成员数、本周UGC数量"
+
+  - type: textarea
+    id: platform-scorecards
+    attributes:
+      label: 各平台数据看板
+      description: |
+        按平台填写关键指标。格式参考如下（可复制后修改）：
+      value: |
+        ### 抖音
+        - 本周发布视频数：
+        - 总播放量：
+        - 平均完播率：
+        - 最高单视频播放：
+        - 新增粉丝：
+        - 取关数：
+        - 净增粉丝：
+
+        ### 小红书
+        - 本周发布笔记数：
+        - 总浏览量：
+        - 总收藏量：
+        - 新增粉丝：
+        - 净增粉丝：
+
+        ### 微博
+        - 本周发布数：
+        - 总阅读量：
+        - 总互动量（点赞+评论+转发）：
+        - 新增粉丝：
+
+        ### B站
+        - 本周发布视频数：
+        - 总播放量：
+        - 投币/收藏比率：
+        - 新增粉丝：
+
+        ### 微信视频号
+        - 本周发布视频数：
+        - 总播放量：
+        - 分享次数：
+        - 新增粉丝：
+
+        ### 全平台汇总
+        - 总内容发布量：
+        - 总曝光量：
+        - 全平台净增粉丝：
+        - 当前全平台总粉丝数：
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: top-performer
+    attributes:
+      label: 本周最佳内容
+      description: |
+        列出本周表现最好的1-3条内容，分析其成功原因。
+        包括：内容标题 / 发布平台 / 核心数据 / 成功原因分析
+      placeholder: |
+        **第一名：**
+        - 标题：
+        - 平台：
+        - 播放/浏览量：
+        - 完播率/互动率：
+        - 成功原因：（例：话题切入时机好、封面点击率高、评论区互动引发算法推流）
+
+        **第二名：**
+        - 标题：
+        - 平台：
+        - 核心数据：
+        - 成功原因：
+
+        **第三名（可选）：**
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: underperformer
+    attributes:
+      label: 本周表现不佳内容
+      description: |
+        列出本周表现低于预期的内容，重点分析原因。
+        目的不是批评，而是从失败中提取可操作的改进点。
+      placeholder: |
+        **表现不佳内容：**
+        - 标题：
+        - 平台：
+        - 实际数据 vs 预期：
+        - 可能原因：（例：发布时间不佳、封面文案不够吸引、内容同质化严重）
+        - 改进建议：
+
+        **共同规律（如有）：**
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: key-insights
+    attributes:
+      label: 本周关键洞察
+      description: |
+        从数据中提炼出的3-5条最重要的发现，可以包括：
+        - 受众行为规律
+        - 内容格式偏好变化
+        - 算法推流规律
+        - 竞品动态观察
+        - 评论区高频话题/问题
+      placeholder: |
+        1.
+        2.
+        3.
+        4.（可选）
+        5.（可选）
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: next-week-priorities
+    attributes:
+      label: 下周内容优先级建议
+      description: |
+        基于本周数据，建议下周内容策略的调整方向。
+        包括：优先发力的平台、优先制作的内容支柱、特定话题建议
+      placeholder: |
+        **平台优先级：**
+        1. [平台名] — 原因：
+        2. [平台名] — 原因：
+
+        **内容支柱优先级：**
+        - 增加：[支柱名] — 原因：
+        - 保持：[支柱名]
+        - 暂缓：[支柱名] — 原因：
+
+        **具体选题建议：**
+        - [选题1] — 数据支撑：
+        - [选题2] — 数据支撑：
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: action-items
+    attributes:
+      label: 行动项（Action Items）
+      description: |
+        将洞察转化为具体的、可执行的行动项。
+        请为每一项指定负责人和完成时间。
+      placeholder: |
+        | 行动项 | 负责人 | 截止时间 | 状态 |
+        |--------|--------|----------|------|
+        | [具体行动] | [@负责人] | [日期] | 待开始 |
+        | [具体行动] | [@负责人] | [日期] | 待开始 |
+        | [具体行动] | [@负责人] | [日期] | 待开始 |
+      render: markdown
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: review-process
+    attributes:
+      label: 复盘流程确认
+      options:
+        - label: 数据已填写完整，无明显异常值未核实
+        - label: 已在团队例会（或异步）分享本周洞察
+        - label: 行动项已分配给具体负责人
+        - label: 本Issue已关联到本周内容Issue（如有关联）

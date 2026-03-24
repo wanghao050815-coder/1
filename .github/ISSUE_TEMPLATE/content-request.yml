@@ -1,0 +1,139 @@
+name: 内容创意申请
+description: 提交新内容创意或选题，进入内容流水线
+labels: ["pipeline/idea"]
+title: "[创意] "
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 内容创意申请表
+        请尽量详细填写每个字段，帮助团队快速评估和推进这个创意。
+        提交后，内容总监会在 **48小时内** 完成初步评审。
+
+  - type: input
+    id: content-title
+    attributes:
+      label: 内容标题/工作名称
+      description: 给这个创意起一个临时标题，方便团队识别（不一定是最终发布标题）
+      placeholder: 例：「新手增肌最常犯的5个错误」系列第一集
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 目标平台
+      description: 这个内容主要面向哪个平台发布？（可以选多平台，但请确认主平台）
+      options:
+        - 抖音（主）
+        - 小红书（主）
+        - 微博（主）
+        - B站（主）
+        - 微信视频号（主）
+        - 多平台同步发布
+        - 尚未确定
+    validations:
+      required: true
+
+  - type: dropdown
+    id: content-pillar
+    attributes:
+      label: 内容支柱归属
+      description: 这个内容属于六大内容支柱中的哪一类？参考 docs/brand/content-pillars.md
+      options:
+        - 训练方法（证据型教程）
+        - 营养饮食（餐食/补剂/辟谣）
+        - 体型变化（进度记录/前后对比）
+        - 健康生活方式（睡眠/压力/日常习惯）
+        - 互动问答（粉丝问题转化为内容）
+        - 宗门IP（社区凝聚力/超级符号内容）
+        - 跨支柱组合（请在下方说明）
+    validations:
+      required: true
+
+  - type: textarea
+    id: raw-idea
+    attributes:
+      label: 创意原始描述
+      description: |
+        用自己的话描述这个创意。不需要完美，越具体越好。
+        可以包含：核心信息点、想表达的观点、参考内容、形式想法（视频/图文/直播等）
+      placeholder: |
+        例：想做一个「深蹲角度大解析」视频，针对膝盖内扣这个超常见问题。
+        核心内容：3个导致膝盖内扣的根本原因（臀部激活不足/踝关节灵活性/重心分配），
+        配合慢动作对比演示。结尾推荐两个矫正练习。
+        参考：[某健身博主]的同类内容做得很好，但我们可以加宗门风格的收尾。
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-now
+    attributes:
+      label: 为什么是现在？
+      description: |
+        说明这个选题的时效性或战略意义。
+        例：当前热点、季节性峰值、粉丝高频提问、竞品机会窗口等
+      placeholder: |
+        例：马上进入备战夏天阶段（3-5月减脂内容需求高峰），
+        且上周有 47 条评论提到深蹲膝盖疼的问题，需求验证充分。
+      render: markdown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: production-complexity
+    attributes:
+      label: 预估制作复杂度
+      description: |
+        简单 = 无需额外拍摄，剪辑1-2小时内完成
+        中等 = 需要专门拍摄，剪辑半天内完成
+        复杂 = 需要多场景拍摄、动画/图表制作或多人协作
+      options:
+        - 简单（可快速产出，适合填充发布空档）
+        - 中等（标准流程，1-3天完成）
+        - 复杂（需提前规划，3天以上）
+        - 不确定（请在下方备注）
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference-content
+    attributes:
+      label: 参考内容 / 灵感来源
+      description: |
+        列出你参考过的相关内容链接或截图描述。
+        可以是竞品内容、行业研究、粉丝评论截图、热搜词等。
+        这部分帮助剪辑师和内容编辑快速理解你的视觉和风格预期。
+      placeholder: |
+        - 参考视频1：[链接或描述]
+        - 参考视频2：[链接或描述]
+        - 相关热搜词：[词1]、[词2]
+        - 粉丝原话（如有）："[粉丝评论截图或原文]"
+      render: markdown
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: 补充说明（可选）
+      description: 任何其他你想让团队知道的信息
+      placeholder: 例：这个创意可以和下周的直播联动，或者可以做成系列。
+      render: markdown
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已查阅内容支柱文档，确认此创意符合品牌方向
+          required: true
+        - label: 我已查阅品牌声音指南，此内容不涉及医疗建议或夸大效果
+          required: true
+        - label: 我已检查近30天发布记录，此选题近期未被重复发布
+          required: false

@@ -1,0 +1,84 @@
+team:
+  members:
+    - name: "创作者"
+      role: "creator"
+      github_username: "[github_username]"
+      notify_on:
+        - escalation
+        - sensitive_comment
+        - kpi_alert
+        - milestone_complete
+
+    - name: "内容策划"
+      role: "content_strategist"
+      github_username: "[github_username]"
+      notify_on:
+        - new_brief_needed
+        - content_approved
+        - weekly_plan_ready
+        - trend_signal
+
+    - name: "视频剪辑"
+      role: "video_editor"
+      github_username: "[github_username]"
+      notify_on:
+        - filming_complete
+        - revision_requested
+        - asset_ready
+
+    - name: "社区运营"
+      role: "community_manager"
+      github_username: "[github_username]"
+      notify_on:
+        - comment_batch_ready
+        - escalation
+        - ugc_detected
+        - community_report_ready
+
+    - name: "数据分析"
+      role: "data_analyst"
+      github_username: "[github_username]"
+      notify_on:
+        - weekly_data_ready
+        - monthly_data_ready
+        - outlier_detected
+        - kpi_alert
+
+roles:
+  creator:
+    description: "博主本人，负责出镜、最终审核、敏感内容处理"
+    permissions:
+      - approve_all
+      - handle_sensitive
+      - set_kpi_targets
+  content_strategist:
+    description: "负责选题策划、脚本撰写、内容日历管理"
+    permissions:
+      - manage_calendar
+      - write_briefs
+      - write_scripts
+  video_editor:
+    description: "负责视频拍摄、剪辑、封面制作、素材管理"
+    permissions:
+      - upload_assets
+      - manage_assets
+  community_manager:
+    description: "负责日常评论回复、社区互动、粉丝关系维护"
+    permissions:
+      - reply_comments
+      - triage_comments
+      - escalate
+  data_analyst:
+    description: "负责数据收集、分析报告、趋势监控"
+    permissions:
+      - pull_analytics
+      - generate_reports
+      - manage_kpis
+
+notification_channels:
+  wecom_webhook: "[企业微信Webhook地址]"
+  dingtalk_webhook: "[钉钉Webhook地址]"
+  notification_levels:
+    info: ["wecom"]
+    warning: ["wecom", "dingtalk"]
+    critical: ["wecom", "dingtalk"]

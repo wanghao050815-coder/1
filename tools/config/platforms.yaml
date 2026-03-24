@@ -1,0 +1,126 @@
+platforms:
+  douyin:
+    name_zh: "抖音"
+    name_en: "Douyin"
+    handle: "[账号ID]"
+    url: "[主页链接]"
+    api_enabled: false
+    posting_times_cst:
+      - "07:00"
+      - "12:00"
+      - "18:00"
+      - "21:00"
+    max_hashtags: 20
+    video_specs:
+      max_duration_seconds: 600
+      max_file_size_mb: 4096
+      recommended_resolution: "1080x1920"
+      frame_rate: 60
+    image_specs:
+      ratio: "9:16"
+      max_file_size_mb: 20
+      formats:
+        - jpg
+        - png
+        - webp
+
+  xiaohongshu:
+    name_zh: "小红书"
+    name_en: "Xiaohongshu"
+    handle: "[账号ID]"
+    url: "[主页链接]"
+    api_enabled: false
+    posting_times_cst:
+      - "07:30"
+      - "12:30"
+      - "18:30"
+      - "22:00"
+    max_hashtags: 30
+    video_specs:
+      max_duration_seconds: 900
+      max_file_size_mb: 1024
+      recommended_resolution: "1080x1920"
+      frame_rate: 30
+    image_specs:
+      ratio: "3:4"
+      max_file_size_mb: 32
+      formats:
+        - jpg
+        - png
+        - webp
+        - heic
+
+  weibo:
+    name_zh: "微博"
+    name_en: "Weibo"
+    handle: "[账号ID]"
+    url: "[主页链接]"
+    api_enabled: false
+    posting_times_cst:
+      - "08:00"
+      - "12:00"
+      - "17:00"
+      - "20:00"
+    max_hashtags: 10
+    video_specs:
+      max_duration_seconds: 3600
+      max_file_size_mb: 2048
+      recommended_resolution: "1920x1080"
+      frame_rate: 30
+    image_specs:
+      ratio: "16:9"
+      max_file_size_mb: 20
+      formats:
+        - jpg
+        - png
+        - gif
+        - webp
+
+  bilibili:
+    name_zh: "B站"
+    name_en: "Bilibili"
+    handle: "[账号ID]"
+    url: "[主页链接]"
+    api_enabled: false
+    posting_times_cst:
+      - "10:00"
+      - "14:00"
+      - "19:00"
+      - "21:30"
+    max_hashtags: 12
+    video_specs:
+      max_duration_seconds: 14400
+      max_file_size_mb: 8192
+      recommended_resolution: "1920x1080"
+      frame_rate: 60
+    image_specs:
+      ratio: "16:9"
+      max_file_size_mb: 20
+      formats:
+        - jpg
+        - png
+        - webp
+
+  wechat:
+    name_zh: "微信"
+    name_en: "WeChat"
+    handle: "[账号ID]"
+    url: "[主页链接]"
+    api_enabled: false
+    posting_times_cst:
+      - "08:00"
+      - "12:00"
+      - "20:00"
+    max_hashtags: 0
+    video_specs:
+      max_duration_seconds: 3600
+      max_file_size_mb: 2048
+      recommended_resolution: "1920x1080"
+      frame_rate: 30
+    image_specs:
+      ratio: "16:9"
+      max_file_size_mb: 10
+      formats:
+        - jpg
+        - png
+        - gif

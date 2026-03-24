@@ -1,0 +1,140 @@
+name: 故障与流程问题报告
+description: 报告工具错误、自动化故障或SOP流程失效问题
+labels: ["bug", "process-failure"]
+title: "[BUG] "
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 故障/流程问题报告
+        感谢你发现并报告问题！请尽量详细描述，帮助团队快速定位和修复。
+        **紧急问题**（影响内容发布或数据安全）请同时在团队沟通群中 @相关负责人。
+
+  - type: dropdown
+    id: issue-category
+    attributes:
+      label: 问题类别
+      description: 这个问题属于哪种类型？
+      options:
+        - GitHub Actions / 自动化脚本故障
+        - GitHub Issues / Projects 配置问题
+        - 数据分析工具或脚本错误
+        - 内容发布工具故障（调度工具/平台后台）
+        - SOP流程文档描述有误或过时
+        - 团队协作工具（企业微信/飞书）问题
+        - 云盘/文件存储访问问题
+        - 平台账号权限或访问问题
+        - 其他（请在下方描述）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 严重程度
+      description: |
+        P0 = 生产阻断，无法发布内容或数据丢失
+        P1 = 影响效率，有临时替代方案
+        P2 = 小问题，不影响核心流程
+        P3 = 优化建议，无紧急性
+      options:
+        - "P0 — 紧急：内容发布受阻 / 数据丢失风险"
+        - "P1 — 高：影响工作流程，需尽快修复"
+        - "P2 — 中：可暂时绕过，但应在本周内修复"
+        - "P3 — 低：优化建议，可排入下次迭代"
+    validations:
+      required: true
+
+  - type: input
+    id: affected-tool
+    attributes:
+      label: 受影响的工具/系统/文档
+      description: 具体是哪个工具、脚本、工作流或文档出现了问题？
+      placeholder: "例：.github/workflows/weekly-digest.yml / scripts/pull_douyin_data.py / docs/sop/publishing.md"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 发生了什么？
+      description: |
+        描述你观察到的问题现象。尽量包含：
+        - 你在做什么操作时出现了问题
+        - 错误信息的完整内容（如有）
+        - 问题截图（如有，可直接粘贴图片）
+      placeholder: |
+        操作步骤：
+        1. 我正在...
+        2. 点击/运行了...
+        3. 出现了...
+
+        错误信息：
+        ```
+        [粘贴错误信息或截图描述]
+        ```
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 期望的正确行为
+      description: 描述在没有这个问题的情况下，系统/工具/流程应该做什么
+      placeholder: "例：weekly-digest workflow 应该每周一 09:00（北京时间）自动创建一个新的数据复盘Issue"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: 复现步骤
+      description: 其他人按照以下步骤能复现这个问题吗？请尽量详细
+      placeholder: |
+        1.
+        2.
+        3.
+        4.
+      render: markdown
+    validations:
+      required: false
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: 临时解决方案（如有）
+      description: 在问题修复之前，有没有可以绕过此问题的临时方法？
+      placeholder: "例：暂时手动在Issues中创建复盘Issue，使用 weekly-review.yml 模板"
+      render: markdown
+    validations:
+      required: false
+
+  - type: input
+    id: first-occurrence
+    attributes:
+      label: 首次发现时间
+      description: 这个问题是什么时候第一次出现的？
+      placeholder: "例：2024-03-18 下午3点"
+    validations:
+      required: false
+
+  - type: input
+    id: reporter
+    attributes:
+      label: 报告人
+      description: 你的姓名或GitHub用户名（方便后续跟进）
+      placeholder: "@GitHub用户名 / 姓名"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: notification-done
+    attributes:
+      label: 紧急通知确认（P0/P1问题必须勾选）
+      options:
+        - label: 已在团队群组通知相关负责人（P0/P1必须）
+        - label: 已尝试自行排查，无法独立解决
+        - label: 此问题之前已被报告过（请在评论中关联原Issue）

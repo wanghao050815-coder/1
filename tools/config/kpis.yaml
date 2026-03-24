@@ -1,0 +1,132 @@
+kpis:
+  platforms:
+    douyin:
+      engagement_rate:
+        target: 5.0
+        unit: "%"
+        description: "（点赞+评论+分享）/ 播放量"
+      follower_growth_rate_monthly:
+        target: 8.0
+        unit: "%"
+        description: "月新增粉丝数 / 月初粉丝数"
+      posting_frequency:
+        target: 5
+        unit: "posts/week"
+        description: "每周发布视频数量"
+      completion_rate:
+        target: 45.0
+        unit: "%"
+        description: "完播率，抖音核心算法指标"
+      avg_watch_time_seconds:
+        target: 30
+        unit: "seconds"
+        description: "平均观看时长"
+
+    xiaohongshu:
+      engagement_rate:
+        target: 8.0
+        unit: "%"
+        description: "（点赞+收藏+评论）/ 曝光量"
+      follower_growth_rate_monthly:
+        target: 6.0
+        unit: "%"
+        description: "月新增粉丝数 / 月初粉丝数"
+      posting_frequency:
+        target: 4
+        unit: "posts/week"
+        description: "每周发布图文或视频数量"
+      save_rate:
+        target: 10.0
+        unit: "%"
+        description: "收藏率，小红书核心分发指标"
+      read_rate:
+        target: 30.0
+        unit: "%"
+        description: "点击阅读率"
+
+    weibo:
+      engagement_rate:
+        target: 3.0
+        unit: "%"
+        description: "（点赞+评论+转发）/ 曝光量"
+      follower_growth_rate_monthly:
+        target: 4.0
+        unit: "%"
+        description: "月新增粉丝数"
+      posting_frequency:
+        target: 7
+        unit: "posts/week"
+        description: "每周发布微博数量（含转发）"
+      repost_rate:
+        target: 2.0
+        unit: "%"
+        description: "转发率"
+
+    bilibili:
+      engagement_rate:
+        target: 6.0
+        unit: "%"
+        description: "（点赞+投币+收藏+弹幕+评论）/ 播放量"
+      follower_growth_rate_monthly:
+        target: 5.0
+        unit: "%"
+        description: "月新增粉丝数"
+      posting_frequency:
+        target: 2
+        unit: "posts/week"
+        description: "每周投稿数量"
+      coin_rate:
+        target: 2.0
+        unit: "%"
+        description: "投币率，B站内容质量信号"
+      favorite_rate:
+        target: 4.0
+        unit: "%"
+        description: "收藏率"
+
+    wechat:
+      engagement_rate:
+        target: 4.0
+        unit: "%"
+        description: "（点赞+在看+分享）/ 阅读量"
+      follower_growth_rate_monthly:
+        target: 3.0
+        unit: "%"
+        description: "月新增关注数"
+      posting_frequency:
+        target: 3
+        unit: "posts/week"
+        description: "每周推文发布数量"
+      open_rate:
+        target: 15.0
+        unit: "%"
+        description: "打开率（订阅用户中打开比例）"
+
+  sect_ip:
+    description: "宗门IP社区化运营指标"
+    private_community_growth_rate_monthly:
+      target: 10.0
+      unit: "%"
+      description: "私域社群月增长率（私信、微信群等）"
+    ugc_count_monthly_target:
+      target: 50
+      unit: "pieces/month"
+      description: "用户主动产出的宗门相关UGC内容数量"
+    veteran_fan_rewatch_rate:
+      target: 30.0
+      unit: "%"
+      description: "老粉丝对新内容的二次观看率（宗门忠诚度指标）"
+    sect_terminology_usage_rate:
+      target: 20.0
+      unit: "%"
+      description: "评论区中粉丝主动使用宗门话语体系的比率"
+    community_nps:
+      target: 60
+      unit: "score"
+      description: "社区净推荐值（-100到100）"
+
+  review_schedule:
+    weekly_review_day: "周五"
+    monthly_review_day: "每月最后一个工作日"
+    alert_threshold_pct: 20
+    description: "KPI偏差超过目标值±20%时触发预警通知"
