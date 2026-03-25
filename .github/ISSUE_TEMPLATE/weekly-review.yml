@@ -195,12 +195,97 @@ body:
     validations:
       required: false
 
+  - type: textarea
+    id: growth-dashboard
+    attributes:
+      label: 增长进度看板
+      description: |
+        对照300万粉丝总目标，更新本周增长进度
+      value: |
+        ### 增长目标进度
+
+        | 指标 | 本周数值 | 目标 | 状态 |
+        |------|----------|------|------|
+        | 全平台总粉丝数 | | 3,000,000 | |
+        | 目标完成度 | | 100% | |
+        | 本周全平台净增粉 | | 15,000/周 | |
+        | 距下一里程碑(150万) | | | |
+
+        ### 各平台增长状态
+
+        | 平台 | 当前粉丝 | 阶段目标 | 本周净增 | 状态(✅🟡🔴) |
+        |------|----------|----------|----------|--------------|
+        | 抖音 | | 1,500,000 | | |
+        | 小红书 | | 600,000 | | |
+        | B站 | | 300,000 | | |
+        | 微博 | | 400,000 | | |
+        | 微信 | | 100,000 | | |
+        | TikTok | | 100,000 | | |
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: viral-content-analysis
+    attributes:
+      label: 爆款分析（如有）
+      description: |
+        如果本周有超平均播放量3倍的爆款内容，拆解其成功要素。
+        爆款公式提炼是从100万到300万最重要的增长杠杆。
+      placeholder: |
+        **爆款内容：**
+        - 标题：
+        - 平台：
+        - 播放量（vs 平均值）：
+        - 涨粉贡献：
+
+        **爆款要素拆解：**
+        - 选题切入点：
+        - 钩子类型：
+        - 封面设计：
+        - 发布时间：
+        - 评论区互动策略：
+
+        **可复制性评估：**
+        - 能否做成系列？
+        - 能否跨平台复制？
+        - 哪些元素可以套用到其他内容？
+
+        （如果本周无爆款，分析距离爆款最近的内容，差在哪里）
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: growth-experiment
+    attributes:
+      label: 增长实验追踪
+      description: |
+        每周设定1-2个增长假设并验证，持续迭代找到最有效的涨粉策略
+      value: |
+        ### 上周实验回顾
+
+        | 实验假设 | 验证方式 | 结果 | 结论 |
+        |----------|----------|------|------|
+        | 例：早8点发布完播率更高 | 对比7天数据 | | |
+
+        ### 下周增长实验
+
+        | 实验假设 | 验证方式 | 预期结果 | 负责人 |
+        |----------|----------|----------|--------|
+        | | | | |
+      render: markdown
+    validations:
+      required: true
+
   - type: checkboxes
     id: review-process
     attributes:
       label: 复盘流程确认
       options:
         - label: 数据已填写完整，无明显异常值未核实
+        - label: 增长进度看板已更新
         - label: 已在团队例会（或异步）分享本周洞察
         - label: 行动项已分配给具体负责人
+        - label: 下周增长实验已设定
         - label: 本Issue已关联到本周内容Issue（如有关联）

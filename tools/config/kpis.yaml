@@ -1,132 +1,394 @@
+# ============================================================
+# KPI 体系 — 以「100万→300万粉丝」为终点反推
+# 三级目标：baseline（底线）→ target（目标）→ stretch（挑战）
+# ============================================================
+
+# 增长阶段定义 — 不同阶段关注不同核心指标
+growth_phases:
+  phase_1:
+    name: "夯实根基"
+    range: "100万→150万"
+    estimated_duration: "4-6个月"
+    core_strategy: "找到2-3个可复制的爆款公式，主力平台稳定产出"
+    priority_metrics:
+      - "爆款率（viral_rate）"
+      - "完播率（completion_rate）"
+      - "内容投产比（content_follower_roi）"
+    success_criteria: "连续4周周均净增粉 ≥ 2万"
+
+  phase_2:
+    name: "多平台放量"
+    range: "150万→220万"
+    estimated_duration: "4-6个月"
+    core_strategy: "爆款公式跨平台复制，合拍/连线引流，矩阵号联动"
+    priority_metrics:
+      - "跨平台分发效率"
+      - "合拍引流转化率"
+      - "各平台均衡增长"
+    success_criteria: "至少3个平台月增长率 ≥ 5%"
+
+  phase_3:
+    name: "IP破圈"
+    range: "220万→300万"
+    estimated_duration: "4-6个月"
+    core_strategy: "直播+私域双引擎，品牌合作提升曝光，出圈事件营销"
+    priority_metrics:
+      - "直播场均涨粉"
+      - "私域转化率"
+      - "品牌合作带量效果"
+    success_criteria: "月均净增粉 ≥ 8万"
+
+# 增长核心指标 — 所有平台通用
+growth_metrics:
+  net_follower_velocity:
+    description: "每周全平台净增粉丝数"
+    baseline: 8000
+    target: 15000
+    stretch: 25000
+    unit: "人/周"
+    alert_below: 5000
+
+  viral_rate:
+    description: "爆款率 — 超平均播放量3倍的内容占比"
+    baseline: 5.0
+    target: 12.0
+    stretch: 20.0
+    unit: "%"
+    calculation: "播放量超过近30天平均值3倍的内容数 / 总发布数"
+
+  content_follower_roi:
+    description: "单条内容平均涨粉数"
+    baseline: 200
+    target: 500
+    stretch: 1000
+    unit: "人/条"
+    calculation: "周净增粉 / 周发布内容数"
+
+  fan_retention_rate:
+    description: "粉丝留存率 — 老粉不取关的比例"
+    baseline: 95.0
+    target: 97.0
+    stretch: 99.0
+    unit: "%"
+    calculation: "(月初粉丝数 - 月取关数) / 月初粉丝数"
+
+  fan_activity_rate:
+    description: "活跃粉丝占比 — 30天内有过互动的粉丝比例"
+    baseline: 3.0
+    target: 5.0
+    stretch: 8.0
+    unit: "%"
+
+# 各平台分项 KPI
 kpis:
   platforms:
     douyin:
       engagement_rate:
-        target: 5.0
-        unit: "%"
         description: "（点赞+评论+分享）/ 播放量"
+        baseline: 3.0
+        target: 5.0
+        stretch: 8.0
+        unit: "%"
       follower_growth_rate_monthly:
-        target: 8.0
-        unit: "%"
         description: "月新增粉丝数 / 月初粉丝数"
-      posting_frequency:
-        target: 5
-        unit: "posts/week"
-        description: "每周发布视频数量"
-      completion_rate:
-        target: 45.0
+        baseline: 5.0
+        target: 8.0
+        stretch: 12.0
         unit: "%"
+      posting_frequency:
+        description: "每周发布视频数量"
+        baseline: 4
+        target: 5
+        stretch: 7
+        unit: "posts/week"
+      completion_rate:
         description: "完播率，抖音核心算法指标"
+        baseline: 35.0
+        target: 45.0
+        stretch: 60.0
+        unit: "%"
       avg_watch_time_seconds:
-        target: 30
-        unit: "seconds"
         description: "平均观看时长"
+        baseline: 20
+        target: 30
+        stretch: 45
+        unit: "seconds"
+      livestream_followers_per_session:
+        description: "单场直播净增粉丝"
+        baseline: 200
+        target: 500
+        stretch: 1500
+        unit: "人/场"
 
     xiaohongshu:
       engagement_rate:
-        target: 8.0
-        unit: "%"
         description: "（点赞+收藏+评论）/ 曝光量"
+        baseline: 5.0
+        target: 8.0
+        stretch: 12.0
+        unit: "%"
       follower_growth_rate_monthly:
-        target: 6.0
-        unit: "%"
         description: "月新增粉丝数 / 月初粉丝数"
+        baseline: 4.0
+        target: 6.0
+        stretch: 10.0
+        unit: "%"
       posting_frequency:
-        target: 4
-        unit: "posts/week"
         description: "每周发布图文或视频数量"
+        baseline: 3
+        target: 4
+        stretch: 6
+        unit: "posts/week"
       save_rate:
-        target: 10.0
-        unit: "%"
         description: "收藏率，小红书核心分发指标"
-      read_rate:
-        target: 30.0
+        baseline: 6.0
+        target: 10.0
+        stretch: 15.0
         unit: "%"
+      read_rate:
         description: "点击阅读率"
+        baseline: 20.0
+        target: 30.0
+        stretch: 40.0
+        unit: "%"
+      search_traffic_ratio:
+        description: "来自搜索的流量占比（长尾价值指标）"
+        baseline: 10.0
+        target: 20.0
+        stretch: 35.0
+        unit: "%"
 
     weibo:
       engagement_rate:
-        target: 3.0
-        unit: "%"
         description: "（点赞+评论+转发）/ 曝光量"
+        baseline: 2.0
+        target: 3.0
+        stretch: 5.0
+        unit: "%"
       follower_growth_rate_monthly:
-        target: 4.0
-        unit: "%"
         description: "月新增粉丝数"
-      posting_frequency:
-        target: 7
-        unit: "posts/week"
-        description: "每周发布微博数量（含转发）"
-      repost_rate:
-        target: 2.0
+        baseline: 3.0
+        target: 4.0
+        stretch: 8.0
         unit: "%"
+      posting_frequency:
+        description: "每周发布微博数量（含转发）"
+        baseline: 5
+        target: 7
+        stretch: 10
+        unit: "posts/week"
+      repost_rate:
         description: "转发率"
+        baseline: 1.0
+        target: 2.0
+        stretch: 4.0
+        unit: "%"
+      hot_topic_hit_rate:
+        description: "蹭热搜成功率 — 热点内容进入话题TOP的比例"
+        baseline: 5.0
+        target: 10.0
+        stretch: 20.0
+        unit: "%"
 
     bilibili:
       engagement_rate:
-        target: 6.0
-        unit: "%"
         description: "（点赞+投币+收藏+弹幕+评论）/ 播放量"
+        baseline: 4.0
+        target: 6.0
+        stretch: 10.0
+        unit: "%"
       follower_growth_rate_monthly:
-        target: 5.0
-        unit: "%"
         description: "月新增粉丝数"
+        baseline: 4.0
+        target: 5.0
+        stretch: 8.0
+        unit: "%"
       posting_frequency:
-        target: 2
-        unit: "posts/week"
         description: "每周投稿数量"
+        baseline: 1
+        target: 2
+        stretch: 3
+        unit: "posts/week"
       coin_rate:
-        target: 2.0
-        unit: "%"
         description: "投币率，B站内容质量信号"
-      favorite_rate:
-        target: 4.0
+        baseline: 1.0
+        target: 2.0
+        stretch: 4.0
         unit: "%"
+      favorite_rate:
         description: "收藏率"
+        baseline: 3.0
+        target: 4.0
+        stretch: 6.0
+        unit: "%"
+      avg_duration_viewed:
+        description: "平均观看时长占比（观看时长/视频总时长）"
+        baseline: 30.0
+        target: 45.0
+        stretch: 60.0
+        unit: "%"
 
     wechat:
       engagement_rate:
-        target: 4.0
-        unit: "%"
         description: "（点赞+在看+分享）/ 阅读量"
+        baseline: 3.0
+        target: 4.0
+        stretch: 6.0
+        unit: "%"
       follower_growth_rate_monthly:
-        target: 3.0
-        unit: "%"
         description: "月新增关注数"
-      posting_frequency:
-        target: 3
-        unit: "posts/week"
-        description: "每周推文发布数量"
-      open_rate:
-        target: 15.0
+        baseline: 2.0
+        target: 3.0
+        stretch: 5.0
         unit: "%"
+      posting_frequency:
+        description: "每周推文发布数量"
+        baseline: 2
+        target: 3
+        stretch: 5
+        unit: "posts/week"
+      open_rate:
         description: "打开率（订阅用户中打开比例）"
+        baseline: 10.0
+        target: 15.0
+        stretch: 25.0
+        unit: "%"
+      private_group_conversion:
+        description: "公域→私域转化率（关注后加入社群的比例）"
+        baseline: 2.0
+        target: 5.0
+        stretch: 10.0
+        unit: "%"
 
+    tiktok:
+      engagement_rate:
+        description: "（likes+comments+shares）/ views"
+        baseline: 4.0
+        target: 6.0
+        stretch: 10.0
+        unit: "%"
+      follower_growth_rate_monthly:
+        description: "月增粉率"
+        baseline: 8.0
+        target: 15.0
+        stretch: 25.0
+        unit: "%"
+      posting_frequency:
+        description: "每周发布数"
+        baseline: 3
+        target: 5
+        stretch: 7
+        unit: "posts/week"
+      completion_rate:
+        description: "完播率"
+        baseline: 30.0
+        target: 40.0
+        stretch: 55.0
+        unit: "%"
+
+  # 宗门IP社区化运营指标
   sect_ip:
-    description: "宗门IP社区化运营指标"
+    description: "宗门IP社区化运营指标 — 衡量粉丝忠诚度和社群凝聚力"
     private_community_growth_rate_monthly:
+      description: "私域社群月增长率（微信群、粉丝群等）"
+      baseline: 5.0
       target: 10.0
+      stretch: 20.0
       unit: "%"
-      description: "私域社群月增长率（私信、微信群等）"
     ugc_count_monthly_target:
-      target: 50
-      unit: "pieces/month"
       description: "用户主动产出的宗门相关UGC内容数量"
+      baseline: 20
+      target: 50
+      stretch: 100
+      unit: "pieces/month"
     veteran_fan_rewatch_rate:
-      target: 30.0
-      unit: "%"
       description: "老粉丝对新内容的二次观看率（宗门忠诚度指标）"
-    sect_terminology_usage_rate:
-      target: 20.0
+      baseline: 20.0
+      target: 30.0
+      stretch: 45.0
       unit: "%"
+    sect_terminology_usage_rate:
       description: "评论区中粉丝主动使用宗门话语体系的比率"
+      baseline: 10.0
+      target: 20.0
+      stretch: 35.0
+      unit: "%"
     community_nps:
-      target: 60
-      unit: "score"
       description: "社区净推荐值（-100到100）"
+      baseline: 40
+      target: 60
+      stretch: 80
+      unit: "score"
 
-  review_schedule:
-    weekly_review_day: "周五"
-    monthly_review_day: "每月最后一个工作日"
-    alert_threshold_pct: 20
-    description: "KPI偏差超过目标值±20%时触发预警通知"
+  # 内容生产效率指标
+  team_efficiency:
+    description: "团队内容产出效率 — 确保增长不被产能瓶颈卡住"
+    idea_to_publish_days:
+      description: "从创意提出到内容发布的平均天数"
+      baseline: 7
+      target: 4
+      stretch: 2
+      unit: "天"
+    revision_rounds:
+      description: "每条内容的平均修改轮次（越少越好）"
+      baseline: 3
+      target: 2
+      stretch: 1
+      unit: "次"
+    weekly_output:
+      description: "全团队每周发布的内容总条数（全平台）"
+      baseline: 12
+      target: 18
+      stretch: 25
+      unit: "条/周"
+    content_utilization_rate:
+      description: "内容复用率 — 单条拍摄素材产出的不同平台版本数"
+      baseline: 1.5
+      target: 2.5
+      stretch: 4.0
+      unit: "版本/条"
+
+# 预警与复盘机制
+review_schedule:
+  weekly_review_day: "周五"
+  monthly_review_day: "每月最后一个工作日"
+  alert_levels:
+    yellow:
+      threshold_pct: 10
+      description: "偏差10-20%，数据分析师在周报中标注，策划调整下周策略"
+      notify: ["data_analyst", "content_strategist"]
+    red:
+      threshold_pct: 20
+      description: "偏差>20%，全员通知，博主介入决策"
+      notify: ["data_analyst", "content_strategist", "creator"]
+
+# 粉丝里程碑
+milestones:
+  - followers: 1200000
+    label: "120万"
+    reward: "团队聚餐"
+  - followers: 1500000
+    label: "150万 — Phase 1 完成"
+    reward: "团队庆祝 + 策略复盘会"
+  - followers: 2000000
+    label: "200万"
+    reward: "粉丝福利活动 + 团队奖金"
+  - followers: 2200000
+    label: "220万 — Phase 2 完成"
+    reward: "策略复盘会 + 下阶段规划"
+  - followers: 2500000
+    label: "250万"
+    reward: "品牌升级 / 宗门仪式"
+  - followers: 3000000
+    label: "300万 — 终极目标达成"
+    reward: "全员大庆 + 下一阶段启动"
+
+# 行业基准（百万粉级别健身博主参考值）
+industry_benchmarks:
+  description: "同量级健身博主的行业平均值，用于外部对标"
+  douyin_engagement_rate: 4.5
+  xiaohongshu_save_rate: 8.0
+  bilibili_coin_rate: 1.8
+  monthly_growth_rate: 5.0
+  viral_rate: 8.0
+  unit_note: "以上为百分比(%)"
