@@ -42,6 +42,8 @@
 | 我是视频剪辑师               | [剪辑师入职](docs/team/onboarding/video-editor.md)          |
 | 我是数据分析师               | [数据分析师入职](docs/team/onboarding/data-analyst.md)      |
 | 我是社群运营                 | [社群运营入职](docs/team/onboarding/community-manager.md)   |
+| 我是文案编辑                 | [文案部门SOP](docs/copywriting/copywriting-sop.md)          |
+| 提交文案需求                 | [创建文案需求 Issue](.github/ISSUE_TEMPLATE/copywriting-request.yml) |
 | 查看本周数据复盘             | [Issues → analytics 标签](../../issues?label=analytics)     |
 | 配置 GitHub Projects 看板   | [项目看板配置指南](.github/PROJECT_CONFIG.md)                |
 | 报告一个工具故障或流程问题   | [创建 Bug Report Issue](.github/ISSUE_TEMPLATE/bug-report.yml) |
@@ -58,24 +60,27 @@
 │   │   └── weekly-digest.yml         # 每周自动创建数据复盘Issue
 │   ├── ISSUE_TEMPLATE/
 │   │   ├── content-request.yml       # 内容创意申请
+│   │   ├── copywriting-request.yml   # 文案需求申请
 │   │   ├── weekly-review.yml         # 每周数据复盘
 │   │   └── bug-report.yml            # 故障/流程问题报告
 │   └── PROJECT_CONFIG.md             # GitHub Projects 配置指南
-└── docs/
-    ├── brand/
-    │   ├── brand-voice-guide.md      # 品牌声音与写作规范
-    │   ├── visual-identity.md        # 视觉识别标准
-    │   ├── content-pillars.md        # 六大内容支柱
-    │   └── super-ip.md               # 宗门超级符号手册
-    └── team/
-        ├── org-chart.md              # 组织架构与RACI矩阵
-        ├── communication-norms.md    # 团队沟通规范
-        └── onboarding/
-            ├── README.md             # 入职总览（所有新成员）
-            ├── content-writer.md     # 内容编辑入职路径
-            ├── video-editor.md       # 剪辑师入职路径
-            ├── data-analyst.md       # 数据分析师入职路径
-            └── community-manager.md  # 社群运营入职路径
+├── docs/
+│   ├── copywriting/
+│   │   └── copywriting-sop.md        # 文案部门SOP流程
+│   ├── brand/
+│   │   ├── brand-voice-guide.md      # 品牌声音与写作规范
+│   │   ├── visual-identity.md        # 视觉识别标准
+│   │   ├── content-pillars.md        # 六大内容支柱
+│   │   └── super-ip.md               # 宗门超级符号手册
+│   └── team/
+│       ├── org-chart.md              # 组织架构与RACI矩阵
+│       ├── communication-norms.md    # 团队沟通规范
+│       └── onboarding/
+│           ├── README.md             # 入职总览（所有新成员）
+│           ├── content-writer.md     # 内容编辑入职路径
+│           ├── video-editor.md       # 剪辑师入职路径
+│           ├── data-analyst.md       # 数据分析师入职路径
+│           └── community-manager.md  # 社群运营入职路径
 ```
 
 ---

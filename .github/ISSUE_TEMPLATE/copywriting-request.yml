@@ -1,0 +1,163 @@
+name: 文案需求申请
+description: 提交文案撰写或优化需求，交由文案部门处理
+labels: ["pipeline/copywriting"]
+title: "[文案] "
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 文案需求申请表
+        请详细填写以下信息，帮助文案部门快速理解需求并高效产出。
+        提交后，文案编辑会在 **24小时内** 确认需求并开始排期。
+
+  - type: dropdown
+    id: copy-type
+    attributes:
+      label: 文案类型
+      description: 本次需要撰写的文案属于哪种类型？
+      options:
+        - 视频脚本（完整口播/旁白脚本）
+        - 视频标题 + 描述文案
+        - 封面标题文案
+        - 小红书图文笔记
+        - 微博博文
+        - 微信公众号推文
+        - 评论区互动话术
+        - 直播口播稿
+        - 商务合作文案
+        - 社群运营话术
+        - 其他（请在补充说明中描述）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-platform
+    attributes:
+      label: 目标发布平台
+      description: 文案将在哪个平台使用？不同平台有不同的文案风格和字数要求。
+      options:
+        - 抖音
+        - 小红书
+        - 微博
+        - B站
+        - 微信公众号
+        - 微信视频号
+        - 多平台（需分别适配）
+        - 非发布用途（内部文档/培训等）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: content-pillar
+    attributes:
+      label: 内容支柱归属
+      description: 参考 docs/brand/content-pillars.md
+      options:
+        - 训练方法（证据型教程）
+        - 营养饮食（餐食/补剂/辟谣）
+        - 体型变化（进度记录/前后对比）
+        - 健康生活方式（睡眠/压力/日常习惯）
+        - 互动问答（粉丝问题转化为内容）
+        - 宗门IP（社区凝聚力/超级符号内容）
+        - 跨支柱组合（请在下方说明）
+    validations:
+      required: true
+
+  - type: input
+    id: related-content-id
+    attributes:
+      label: 关联内容编号（如有）
+      description: 如果本文案与已有内容日历条目关联，请填写内容编号
+      placeholder: 例：CB-042
+    validations:
+      required: false
+
+  - type: textarea
+    id: brief
+    attributes:
+      label: 文案需求简述
+      description: |
+        描述你对文案的核心需求。包括但不限于：
+        - 核心信息点 / 想传达的关键信息
+        - 目标受众画像
+        - 期望的行动号召（CTA）
+        - 字数/时长要求
+      placeholder: |
+        例：需要一个60秒口播脚本，主题是「深蹲膝盖内扣的3个原因」。
+        核心信息：臀部激活不足、踝关节灵活性、重心分配。
+        目标受众：健身新手（0-6个月经验）。
+        CTA：引导关注 + 评论区互动（「你深蹲时最大的困扰是什么？」）。
+        风格：专业但不严肃，带点宗门风格的幽默感。
+      render: markdown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tone
+    attributes:
+      label: 文案风格/语气
+      description: 本次文案期望的语气风格，参考品牌声音指南
+      options:
+        - 专业权威型（教练口吻，引用研究数据）
+        - 亲和鼓励型（朋友聊天，温暖激励）
+        - 幽默趣味型（轻松搞笑，宗门梗融入）
+        - 热血激励型（运动感，高能量）
+        - 故事叙事型（个人经历，情感共鸣）
+        - 按品牌声音指南默认风格
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: 紧急程度
+      description: 文案完成的时间要求
+      options:
+        - 常规（3个工作日内）
+        - 加急（24小时内）
+        - 紧急（今日内，需提前沟通）
+        - 排期中（按内容日历时间节点）
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: 参考素材 / 灵感来源
+      description: |
+        提供参考内容帮助文案编辑快速对齐预期。
+        可以包含：竞品文案示例、过去效果好的文案、粉丝原话、热门话题等
+      placeholder: |
+        - 参考文案1：[链接或原文]
+        - 历史高互动文案：[标题]（点赞XX，评论XX）
+        - 粉丝原话：「这个动作我一直做错了…」
+        - 热搜关键词：#深蹲 #膝盖保护
+      render: markdown
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: 补充说明（可选）
+      description: 任何其他需要文案编辑注意的事项
+      placeholder: |
+        例：这篇文案需要配合周三的视频发布，请在周二前完成。
+        注意避免提及具体品牌名，因为还在谈合作。
+      render: markdown
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已查阅品牌声音指南，需求符合品牌调性
+          required: true
+        - label: 文案不涉及未经验证的医疗/健康声明
+          required: true
+        - label: 如为商务合作文案，已确认合作方要求和限制条件
+          required: false
