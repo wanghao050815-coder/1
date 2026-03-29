@@ -233,6 +233,73 @@ def publish(platform, input_path, video_info, model):
     render(result)
 
 
+# ── Librarian Agent (素材库管理) ──────────────────────
+
+
+@cli.command()
+@click.option("--input", "-i", "input_path", required=True, help="原始文案文件或目录路径")
+@click.option("--engagement", "-e", default="", help="互动数据（如'点赞1.2w 评论800 收藏3k'）")
+@click.option("--model", "-m", default=None, help="模型覆盖")
+def ingest(input_path, engagement, model):
+    """📥 文案入库 — 分析原始文案并存入素材库"""
+    from .librarian import LibrarianAgent
+
+    console.print(f"\n[bold gold1]⚔️ 邪修宗·文案馆[/bold gold1]\n")
+
+    agent = LibrarianAgent(model=model) if model else LibrarianAgent()
+    p = Path(input_path)
+
+    with console.status("[bold gold1]分析入库中...[/bold gold1]"):
+        if p.is_dir():
+            result = agent.ingest_batch(str(p))
+        elif p.is_file():
+            raw = p.read_text(encoding="utf-8")
+            result = agent.ingest(raw, source_file=p.name, engagement=engagement)
+        else:
+            console.print(f"[red]路径不存在: {input_path}[/red]")
+            return
+
+    render(result)
+
+
+@cli.command()
+@click.option("--interactive", is_flag=True, help="交互式风格提炼（多轮问答）")
+@click.option("--model", "-m", default=None, help="模型覆盖")
+def analyze(interactive, model):
+    """🧬 风格提炼 — 分析素材库，输出写作风格 DNA"""
+    from .librarian import LibrarianAgent
+
+    console.print(f"\n[bold gold1]⚔️ 邪修宗·风格DNA提炼[/bold gold1]\n")
+
+    agent = LibrarianAgent(model=model) if model else LibrarianAgent()
+
+    if interactive:
+        console.print("[yellow]交互模式暂未实现，使用自动分析模式。[/yellow]\n")
+
+    with console.status("[bold gold1]深度分析中...提炼写作DNA...[/bold gold1]"):
+        result = agent.analyze_style()
+
+    render(result)
+
+
+@cli.command()
+@click.option("--input", "-i", "input_path", required=True, help="已审核文案文件路径")
+@click.option("--engagement", "-e", default="", help="互动数据")
+@click.option("--model", "-m", default=None, help="模型覆盖")
+def approve(input_path, engagement, model):
+    """✅ 审核入库 — 将审核通过的文案存入素材库"""
+    from .librarian import LibrarianAgent
+
+    draft = read_input(input_path)
+    console.print(f"\n[bold gold1]⚔️ 邪修宗·文案入库[/bold gold1]\n")
+
+    with console.status("[bold gold1]分析入库中...[/bold gold1]"):
+        agent = LibrarianAgent(model=model) if model else LibrarianAgent()
+        result = agent.approve_to_library(draft, source_file=Path(input_path).name, engagement=engagement)
+
+    render(result)
+
+
 # ── Coach Agent (会员私教) ────────────────────────────
 
 

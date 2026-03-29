@@ -52,14 +52,35 @@ class BaseAgent:
         return self._load_doc(f"tools/配置/{name}.yaml")
 
     def _load_library(self) -> str:
-        """加载历史高互动文案库。"""
+        """加载历史高互动文案库（支持 .md 和 .json）。"""
+        import json as _json
         library_dir = self.repo_root / "数据" / "文案" / "素材库"
         if not library_dir.exists():
             return ""
         texts = []
+        for f in sorted(library_dir.glob("*.json")):
+            try:
+                data = _json.loads(f.read_text(encoding="utf-8"))
+                entry = f"### [{data.get('platform', '?')}] {data.get('title', f.stem)}"
+                entry += f"\n钩子: {data.get('hook', '')}"
+                entry += f"\nCTA: {data.get('cta', '')}"
+                entry += f"\n风格: {data.get('style_notes', '')}"
+                entry += f"\n\n{data.get('body', '')}"
+                texts.append(entry)
+            except (_json.JSONDecodeError, KeyError):
+                pass
         for f in sorted(library_dir.glob("*.md")):
+            if f.name.lower() == "readme.md":
+                continue
             texts.append(f"### {f.stem}\n{f.read_text(encoding='utf-8')}")
         return "\n\n---\n\n".join(texts) if texts else ""
+
+    def _load_style_dna(self) -> str:
+        """加载风格 DNA 手册（如存在）。"""
+        path = self.repo_root / "数据" / "文案" / "风格DNA.md"
+        if path.exists():
+            return path.read_text(encoding="utf-8")
+        return ""
 
     def _load_calendar_week(self, week: str = None) -> str:
         """加载指定周的 content calendar。"""

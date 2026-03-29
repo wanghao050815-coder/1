@@ -76,6 +76,8 @@ class CopywriterAgent(BaseAgent):
     def _build_system_prompt(self) -> str:
         library = self._load_library()
         library_block = f"\n<copy_library>\n{library}\n</copy_library>" if library else ""
+        style_dna = self._load_style_dna()
+        style_dna_block = f"\n<写作风格DNA>\n{style_dna}\n</写作风格DNA>" if style_dna else ""
 
         return f"""你是「邪修宗」内容团队的首席文案 Agent。你的任务是根据选题 Brief 生成符合品牌调性的多平台文案。
 
@@ -97,8 +99,11 @@ class CopywriterAgent(BaseAgent):
 
 {self._docs_block("content_pillars", "内容支柱体系")}
 {library_block}
+{style_dna_block}
 
 ## 输出要求
+
+**重要：如果存在「写作风格 DNA」，你必须模仿其中记录的写作习惯（钩子偏好、句式特征、词汇指纹、CTA 模式）。品牌规范是硬约束，风格 DNA 是软约束——在不违反品牌规范的前提下，尽可能贴近创作者的个人风格。**
 
 ### 对于每个平台，你必须输出：
 1. **标题** — 严格遵守字数限制
