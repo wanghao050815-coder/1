@@ -18,12 +18,13 @@ class BaseAgent:
 
     # 文档 key → 相对路径映射
     DOC_MAP = {
-        "brand_voice": "docs/brand/brand-voice-guide.md",
-        "content_pillars": "docs/brand/content-pillars.md",
-        "super_ip": "docs/brand/super-ip.md",
-        "visual_identity": "docs/brand/visual-identity.md",
-        "copywriting_sop": "docs/copywriting/copywriting-sop.md",
-        "douyin_playbook": "docs/platforms/douyin-playbook.md",
+        "brand_voice": "文档/品牌/brand-voice-guide.md",
+        "content_pillars": "文档/品牌/content-pillars.md",
+        "super_ip": "文档/品牌/super-ip.md",
+        "visual_identity": "文档/品牌/visual-identity.md",
+        "copywriting_sop": "文档/文案/copywriting-sop.md",
+        "douyin_playbook": "文档/平台/douyin-playbook.md",
+        "coach_standards": "文档/会员服务/训练标准.md",
     }
 
     def __init__(self, model: str = None):
@@ -48,11 +49,11 @@ class BaseAgent:
         return self._doc_cache
 
     def _load_config(self, name: str) -> str:
-        return self._load_doc(f"tools/config/{name}.yaml")
+        return self._load_doc(f"tools/配置/{name}.yaml")
 
     def _load_library(self) -> str:
         """加载历史高互动文案库。"""
-        library_dir = self.repo_root / "data" / "copywriting" / "library"
+        library_dir = self.repo_root / "数据" / "文案" / "素材库"
         if not library_dir.exists():
             return ""
         texts = []
@@ -62,7 +63,7 @@ class BaseAgent:
 
     def _load_calendar_week(self, week: str = None) -> str:
         """加载指定周的 content calendar。"""
-        cal_dir = self.repo_root / "data" / "content_calendar"
+        cal_dir = self.repo_root / "数据" / "内容日历"
         if not cal_dir.exists():
             return ""
         if week:
@@ -113,7 +114,7 @@ class BaseAgent:
 
     def save_draft(self, content: str, metadata: dict, filename: str = None) -> Path:
         """保存文案草稿到 data/copywriting/drafts/。"""
-        drafts_dir = self.repo_root / "data" / "copywriting" / "drafts"
+        drafts_dir = self.repo_root / "数据" / "文案" / "草稿"
         drafts_dir.mkdir(parents=True, exist_ok=True)
 
         if not filename:
@@ -131,6 +132,22 @@ class BaseAgent:
         header += "status: draft\n---\n\n"
 
         filepath.write_text(header + content, encoding="utf-8")
+        return filepath
+
+    def save_member_plan(self, username: str, plan_type: str, content: str) -> Path:
+        """保存会员计划到 数据/会员服务/计划输出/{用户名}_{周}/。"""
+        week = datetime.now().strftime("%YW%W")
+        output_dir = self.repo_root / "数据" / "会员服务" / "计划输出" / f"{username}_{week}"
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        filename_map = {
+            "warmup": "体态热身.md",
+            "training": "训练计划.md",
+            "diet": "饮食方案.md",
+        }
+        filename = filename_map.get(plan_type, f"{plan_type}.md")
+        filepath = output_dir / filename
+        filepath.write_text(content, encoding="utf-8")
         return filepath
 
     @staticmethod

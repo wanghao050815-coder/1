@@ -233,5 +233,82 @@ def publish(platform, input_path, video_info, model):
     render(result)
 
 
+# ── Coach Agent (会员私教) ────────────────────────────
+
+
+@cli.command()
+@click.option("--input", "-i", "input_path", required=True, help="用户档案文件路径")
+@click.option(
+    "--part", "-p", default="all",
+    type=click.Choice(["all", "warmup", "training", "diet"]),
+    help="生成哪部分计划",
+)
+@click.option("--no-save", is_flag=True, help="不保存计划文件")
+@click.option("--model", "-m", default=None, help="模型覆盖")
+def coach(input_path, part, no_save, model):
+    """💪 私教计划 — Coach Agent（体态热身/训练/饮食）"""
+    from .coach import CoachAgent
+
+    profile = read_input(input_path)
+    console.print(f"\n[bold gold1]⚔️ 邪修宗·私教部[/bold gold1]")
+    console.print(f"计划类型: [cyan]{part}[/cyan]\n")
+
+    agent = CoachAgent(model=model) if model else CoachAgent()
+    save = not no_save
+
+    with console.status("[bold gold1]修炼计划生成中...[/bold gold1]"):
+        if part == "all":
+            result = agent.generate_full_plan(profile, save=save)
+        elif part == "warmup":
+            result = agent.generate_warmup(profile, save=save)
+        elif part == "training":
+            result = agent.generate_training(profile, save=save)
+        elif part == "diet":
+            result = agent.generate_diet(profile, save=save)
+
+    render(result)
+
+
+@cli.command()
+@click.option("--input", "-i", "input_path", required=True, help="当前计划文件路径")
+@click.option("--feedback", "-f", required=True, help="用户反馈（如'卧推肩膀不舒服'）")
+@click.option("--model", "-m", default=None, help="模型覆盖")
+def adjust(input_path, feedback, model):
+    """🔧 调整计划 — 根据用户反馈修改训练/饮食方案"""
+    from .coach import CoachAgent
+
+    plan = read_input(input_path)
+    console.print(f"\n[bold gold1]⚔️ 邪修宗·计划调整[/bold gold1]\n")
+
+    with console.status("[bold gold1]调整中...[/bold gold1]"):
+        agent = CoachAgent(model=model) if model else CoachAgent()
+        result = agent.adjust_plan(plan, feedback)
+
+    render(result)
+
+
+@cli.command()
+@click.option("--profile", required=True, help="用户档案文件路径")
+@click.option("--plan", "plan_path", required=True, help="当前计划文件路径")
+@click.option("--data", "-d", required=True, help="训练进展数据（文字描述或文件路径）")
+@click.option("--model", "-m", default=None, help="模型覆盖")
+def progress(profile, plan_path, data, model):
+    """📈 阶段评估 — 判断是否进入下一训练阶段"""
+    from .coach import CoachAgent
+
+    profile_text = read_input(profile)
+    plan_text = read_input(plan_path)
+    # data 可以是文件路径也可以是文字描述
+    data_text = read_input(data, data)
+
+    console.print(f"\n[bold gold1]⚔️ 邪修宗·修炼评估[/bold gold1]\n")
+
+    with console.status("[bold gold1]评估中...[/bold gold1]"):
+        agent = CoachAgent(model=model) if model else CoachAgent()
+        result = agent.progress_check(profile_text, plan_text, data_text)
+
+    render(result)
+
+
 if __name__ == "__main__":
     cli()
