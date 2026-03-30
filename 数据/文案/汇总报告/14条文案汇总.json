@@ -1,0 +1,155 @@
+{
+  "campaign": {
+    "name": "四维痛点系列首发",
+    "date": "2025-07-01 ~ 2025-07-14",
+    "generated_at": "2026-03-30T06:25:31.807467"
+  },
+  "statistics": {
+    "total": 14,
+    "generated": 14,
+    "high_quality": 14,
+    "needs_improvement": 0
+  },
+  "copies": [
+    {
+      "id": "PC-001",
+      "title": "背阔肌1厘米，年薪差10万？加入邪修带你抄近路！",
+      "dimension": "financial",
+      "platform": "douyin",
+      "body_category": "背部",
+      "hook_type": "反问梗式",
+      "personality_score": 90.0,
+      "file": "数据/文案/草稿/PC-001.md"
+    },
+    {
+      "id": "PC-002",
+      "title": "【职场背肌】气质是无形的财富，这个部位弱，升职就难",
+      "dimension": "financial",
+      "platform": "xiaohongshu",
+      "body_category": "背部",
+      "hook_type": "问题递进式",
+      "personality_score": 90.0,
+      "file": "数据/文案/草稿/PC-002.md"
+    },
+    {
+      "id": "PC-003",
+      "title": "为什么老板重用有身材的人？这个秘密你必须知道",
+      "dimension": "financial",
+      "platform": "douyin",
+      "body_category": "体态纠正",
+      "hook_type": "问题递进式",
+      "personality_score": 90.0,
+      "file": "数据/文案/草稿/PC-003.md"
+    },
+    {
+      "id": "PC-004",
+      "title": "【职业蜕变】3个月身材改变，职场竞争力提升的秘密",
+      "dimension": "financial",
+      "platform": "xiaohongshu",
+      "body_category": "综合",
+      "hook_type": "陈述式",
+      "personality_score": 90.0,
+      "file": "数据/文案/草稿/PC-004.md"
+    },
+    {
+      "id": "PC-005",
+      "title": "你还在为自己的身体自卑？这个秘法改变了100个人",
+      "dimension": "psychological",
+      "platform": "douyin",
+      "body_category": "腹肌/核心",
+      "hook_type": "问题递进式",
+      "personality_score": 90.0,
+      "file": "数据/文案/草稿/PC-005.md"
+    },
+    {
+      "id": "PC-006",
+      "title": "30天自信心重塑计划，从身体改变开始",
+      "dimension": "psychological",
+      "platform": "xiaohongshu",
+      "body_category": "腹肌/核心",
+      "hook_type": "陈述式",
+      "personality_score": 90.0,
+      "file": "数据/文案/草稿/PC-006.md"
+    },
+    {
+      "id": "PC-007",
+      "title": "从自卑到自信的44天秘法，宗主教你",
+      "dimension": "psychological",
+      "platform": "douyin",
+      "body_category": "综合",
+      "hook_type": "反问梗式",
+      "personality_score": 90.0,
+      "file": "数据/文案/草稿/PC-007.md"
+    },
+    {
+      "id": "PC-008",
+      "title": "吸引力提升的生物学原理，这就是为什么他更受欢迎",
+      "dimension": "social",
+      "platform": "douyin",
+      "body_category": "胸肌/肩部",
+      "hook_type": "问题递进式",
+      "personality_score": 90.0,
+      "file": "数据/文案/草稿/PC-008.md"
+    },
+    {
+      "id": "PC-009",
+      "title": "为什么健身的人更受欢迎？这3个原因你必须知道",
+      "dimension": "social",
+      "platform": "xiaohongshu",
+      "body_category": "综合",
+      "hook_type": "问题递进式",
+      "personality_score": 90.0,
+      "file": "数据/文案/草稿/PC-009.md"
+    },
+    {
+      "id": "PC-010",
+      "title": "约到心仪的人的秘密，从改变身材开始",
+      "dimension": "social",
+      "platform": "douyin",
+      "body_category": "胸肌/肩部/腹肌",
+      "hook_type": "陈述式",
+      "personality_score": 90.0,
+      "file": "数据/文案/草稿/PC-010.md"
+    },
+    {
+      "id": "PC-011",
+      "title": "代谢问题的宗门解决方案，不挨饿也能瘦",
+      "dimension": "health",
+      "platform": "douyin",
+      "body_category": "腹肌/核心",
+      "hook_type": "反问梗式",
+      "personality_score": 90.0,
+      "file": "数据/文案/草稿/PC-011.md"
+    },
+    {
+      "id": "PC-012",
+      "title": "【上班族康复】腰痛、颈椎、疲劳...一个秘法全解决",
+      "dimension": "health",
+      "platform": "xiaohongshu",
+      "body_category": "体态纠正/核心",
+      "hook_type": "陈述式",
+      "personality_score": 90.0,
+      "file": "数据/文案/草稿/PC-012.md"
+    },
+    {
+      "id": "PC-013",
+      "title": "颈椎腰椎的终极秘法，宗主20年的训练心得",
+      "dimension": "health",
+      "platform": "douyin",
+      "body_category": "体态纠正",
+      "hook_type": "陈述式",
+      "personality_score": 90.0,
+      "file": "数据/文案/草稿/PC-013.md"
+    },
+    {
+      "id": "PC-014",
+      "title": "整体蜕变的44天计划，从财务+心理+社交的三维突破",
+      "dimension": "integrated",
+      "platform": "xiaohongshu",
+      "body_category": "综合",
+      "hook_type": "陈述式",
+      "personality_score": 90.0,
+      "file": "数据/文案/草稿/PC-014.md"
+    }
+  ]
+}
