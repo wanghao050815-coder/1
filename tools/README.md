@@ -16,6 +16,7 @@ tools/
 ├── analytics/             # 数据分析工具
 ├── publishing/            # 发布核查工具
 ├── community/             # 社区管理工具
+├── copywriting/           # 文案部门工具
 └── utils/                 # 公共工具模块
 ```
 
@@ -225,6 +226,73 @@ python community/community_cli.py report --days 7
 
 ---
 
+### 文案部门工具 (`copywriting/copy_cli.py`)
+
+#### 创建文案草稿
+
+```bash
+# 创建抖音视频脚本
+python copywriting/copy_cli.py create --type script --platform douyin --pillar training
+
+# 创建小红书笔记
+python copywriting/copy_cli.py create --type note --platform xiaohongshu --pillar nutrition
+
+# 创建微博博文
+python copywriting/copy_cli.py create --type weibo --platform weibo
+```
+
+可用文案类型：`script`（视频脚本）、`title`（标题+描述）、`cover`（封面文案）、`note`（小红书笔记）、`weibo`（微博博文）、`wechat`（微信推文）、`comment`（互动话术）、`live`（直播口播稿）、`commercial`（商务合作文案）、`community`（社群话术）
+
+#### 查看文案列表
+
+```bash
+# 查看所有文案
+python copywriting/copy_cli.py list
+
+# 按状态筛选
+python copywriting/copy_cli.py list --status draft
+python copywriting/copy_cli.py list --status review
+
+# 按平台筛选
+python copywriting/copy_cli.py list --platform douyin
+```
+
+可用状态：`draft` → `review` → `revision` → `approved` → `published` → `archived`
+
+#### 审核文案
+
+```bash
+python copywriting/copy_cli.py review --id CP-20240318-001
+```
+
+#### 审核通过
+
+```bash
+python copywriting/copy_cli.py approve --id CP-20240318-001
+```
+
+#### 查看话术库
+
+```bash
+# 查看全部话术库
+python copywriting/copy_cli.py library
+
+# 按支柱和平台筛选
+python copywriting/copy_cli.py library --pillar training --platform douyin
+```
+
+#### 文案统计
+
+```bash
+# 近30天统计
+python copywriting/copy_cli.py stats
+
+# 自定义天数
+python copywriting/copy_cli.py stats --days 7
+```
+
+---
+
 ## 数据文件位置
 
 | 类型 | 路径 |
@@ -233,6 +301,7 @@ python community/community_cli.py report --days 7
 | 分析数据 | `../data/analytics/` |
 | 发布日志 | `../data/publishing_logs/` |
 | 回复模板 | `../data/response_templates/` |
+| 文案数据 | `../data/copywriting/` |
 
 ---
 
