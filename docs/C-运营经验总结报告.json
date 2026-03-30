@@ -1,0 +1,725 @@
+{
+  "report_title": "邪修宗运营经验总结报告",
+  "generated_at": "",
+  "data_summary": {
+    "total_entries": 24,
+    "total_categories": 1,
+    "total_platforms": 1
+  },
+  "category_analysis": {
+    "by_category": {
+      "腹肌/核心": {
+        "count": 24,
+        "total_likes": 1051413,
+        "total_engagement": 0,
+        "entries": [
+          {
+            "title": "仰卧起坐？狗都不_！腹肌高效训练！宗主带你抄近路！",
+            "likes": 232149,
+            "hook_type": "反问梗式",
+            "cta_type": "效果承诺型",
+            "platform": "douyin"
+          },
+          {
+            "title": "卷腹？狗都不_！高效练腹！加入邪修带你抄近路！",
+            "likes": 141602,
+            "hook_type": "反问梗式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          },
+          {
+            "title": "肩胛骨上翘！翼状肩胛，前锯肌激活！加入邪修1秒搞定！",
+            "likes": 120530,
+            "hook_type": "感叹堆积式",
+            "cta_type": "行动鼓励型",
+            "platform": "douyin"
+          },
+          {
+            "title": "腰围low一下！加入邪修带你抄近路！",
+            "likes": 119217,
+            "hook_type": "陈述式",
+            "cta_type": "行动鼓励型",
+            "platform": "douyin"
+          },
+          {
+            "title": "邪修宗主赐你腹肌！加入邪修带你抄近路！",
+            "likes": 59082,
+            "hook_type": "陈述式",
+            "cta_type": "效果承诺型",
+            "platform": "douyin"
+          },
+          {
+            "title": "四肢细，小肚子大！骨盆前倾！练宗主的随时随地修炼功法！",
+            "likes": 48902,
+            "hook_type": "感叹堆积式",
+            "cta_type": "行动鼓励型",
+            "platform": "douyin"
+          },
+          {
+            "title": "比腹肌还帅的鲨鱼肌-前锯肌 正确修炼功法 宗主带你抄近路",
+            "likes": 43196,
+            "hook_type": "陈述式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          },
+          {
+            "title": "腹肌速成计划！宗主带你更高效的练腹！",
+            "likes": 39143,
+            "hook_type": "陈述式",
+            "cta_type": "行动鼓励型",
+            "platform": "douyin"
+          },
+          {
+            "title": "腰两侧有肉练什么？马甲线怎么练更高效！",
+            "likes": 36197,
+            "hook_type": "问题递进式",
+            "cta_type": "效果承诺型",
+            "platform": "douyin"
+          },
+          {
+            "title": "宗主传你悬垂腹小肚子突出解决功法！",
+            "likes": 35043,
+            "hook_type": "陈述式",
+            "cta_type": "行动鼓励型",
+            "platform": "douyin"
+          },
+          {
+            "title": "这套腹肌强化功法！练出大块儿腹肌！",
+            "likes": 29485,
+            "hook_type": "陈述式",
+            "cta_type": "行动鼓励型",
+            "platform": "douyin"
+          },
+          {
+            "title": "邪修打假第一期！",
+            "likes": 23783,
+            "hook_type": "陈述式",
+            "cta_type": "效果承诺型",
+            "platform": "douyin"
+          },
+          {
+            "title": "减脂到底该怎么吃？符合中国膳食指南更适合国人的膳食策略！",
+            "likes": 22767,
+            "hook_type": "问题递进式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          },
+          {
+            "title": "在家就想要腹肌？真贪心！我喜欢！",
+            "likes": 15648,
+            "hook_type": "陈述式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          },
+          {
+            "title": "悬垂举腿这玩意还歹是宗主来！",
+            "likes": 12956,
+            "hook_type": "陈述式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          },
+          {
+            "title": "告别假小腹！腰围除了减脂可以试一下这样练！",
+            "likes": 10793,
+            "hook_type": "陈述式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          },
+          {
+            "title": "江湖救急！强化束腰肌宗主带你少走弯路！",
+            "likes": 9596,
+            "hook_type": "陈述式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          },
+          {
+            "title": "平板支撑！非常好的核心动作！",
+            "likes": 9027,
+            "hook_type": "陈述式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          },
+          {
+            "title": "做一个完美的平板支撑练核心！",
+            "likes": 9027,
+            "hook_type": "陈述式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          },
+          {
+            "title": "拜龙门架不如拜宗主！更高效的腹肌训练",
+            "likes": 7572,
+            "hook_type": "陈述式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          },
+          {
+            "title": "三步带你高效练出马甲线把腰练细！",
+            "likes": 7198,
+            "hook_type": "陈述式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          },
+          {
+            "title": "下腹这样练！真的太牛了！",
+            "likes": 6959,
+            "hook_type": "陈述式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          },
+          {
+            "title": "腹肌这一块儿，还歹是宗主秘法来相助！",
+            "likes": 6657,
+            "hook_type": "陈述式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          },
+          {
+            "title": "收紧核心？狗都不_！",
+            "likes": 4884,
+            "hook_type": "反问梗式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          }
+        ],
+        "avg_likes": 43808.875,
+        "top_entries": [
+          {
+            "title": "仰卧起坐？狗都不_！腹肌高效训练！宗主带你抄近路！",
+            "likes": 232149,
+            "hook_type": "反问梗式",
+            "cta_type": "效果承诺型",
+            "platform": "douyin"
+          },
+          {
+            "title": "卷腹？狗都不_！高效练腹！加入邪修带你抄近路！",
+            "likes": 141602,
+            "hook_type": "反问梗式",
+            "cta_type": "自然收尾型",
+            "platform": "douyin"
+          },
+          {
+            "title": "肩胛骨上翘！翼状肩胛，前锯肌激活！加入邪修1秒搞定！",
+            "likes": 120530,
+            "hook_type": "感叹堆积式",
+            "cta_type": "行动鼓励型",
+            "platform": "douyin"
+          }
+        ]
+      }
+    },
+    "total_categories": 1
+  },
+  "hook_type_analysis": {
+    "by_hook_type": {
+      "反问梗式": {
+        "count": 3,
+        "total_likes": 378635,
+        "entries": [
+          {
+            "title": "仰卧起坐？狗都不_！腹肌高效训练！宗主带你抄近路！",
+            "likes": 232149,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "卷腹？狗都不_！高效练腹！加入邪修带你抄近路！",
+            "likes": 141602,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "收紧核心？狗都不_！",
+            "likes": 4884,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          }
+        ],
+        "avg_likes": 126211.66666666667,
+        "top_entries": [
+          {
+            "title": "仰卧起坐？狗都不_！腹肌高效训练！宗主带你抄近路！",
+            "likes": 232149,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "卷腹？狗都不_！高效练腹！加入邪修带你抄近路！",
+            "likes": 141602,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "收紧核心？狗都不_！",
+            "likes": 4884,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          }
+        ]
+      },
+      "感叹堆积式": {
+        "count": 2,
+        "total_likes": 169432,
+        "entries": [
+          {
+            "title": "肩胛骨上翘！翼状肩胛，前锯肌激活！加入邪修1秒搞定！",
+            "likes": 120530,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "四肢细，小肚子大！骨盆前倾！练宗主的随时随地修炼功法！",
+            "likes": 48902,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          }
+        ],
+        "avg_likes": 84716.0,
+        "top_entries": [
+          {
+            "title": "肩胛骨上翘！翼状肩胛，前锯肌激活！加入邪修1秒搞定！",
+            "likes": 120530,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "四肢细，小肚子大！骨盆前倾！练宗主的随时随地修炼功法！",
+            "likes": 48902,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          }
+        ]
+      },
+      "问题递进式": {
+        "count": 2,
+        "total_likes": 58964,
+        "entries": [
+          {
+            "title": "腰两侧有肉练什么？马甲线怎么练更高效！",
+            "likes": 36197,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "减脂到底该怎么吃？符合中国膳食指南更适合国人的膳食策略！",
+            "likes": 22767,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          }
+        ],
+        "avg_likes": 29482.0,
+        "top_entries": [
+          {
+            "title": "腰两侧有肉练什么？马甲线怎么练更高效！",
+            "likes": 36197,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "减脂到底该怎么吃？符合中国膳食指南更适合国人的膳食策略！",
+            "likes": 22767,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          }
+        ]
+      },
+      "陈述式": {
+        "count": 17,
+        "total_likes": 444382,
+        "entries": [
+          {
+            "title": "腰围low一下！加入邪修带你抄近路！",
+            "likes": 119217,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "邪修宗主赐你腹肌！加入邪修带你抄近路！",
+            "likes": 59082,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "比腹肌还帅的鲨鱼肌-前锯肌 正确修炼功法 宗主带你抄近路",
+            "likes": 43196,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "腹肌速成计划！宗主带你更高效的练腹！",
+            "likes": 39143,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "宗主传你悬垂腹小肚子突出解决功法！",
+            "likes": 35043,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "这套腹肌强化功法！练出大块儿腹肌！",
+            "likes": 29485,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "邪修打假第一期！",
+            "likes": 23783,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "在家就想要腹肌？真贪心！我喜欢！",
+            "likes": 15648,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "悬垂举腿这玩意还歹是宗主来！",
+            "likes": 12956,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "告别假小腹！腰围除了减脂可以试一下这样练！",
+            "likes": 10793,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "江湖救急！强化束腰肌宗主带你少走弯路！",
+            "likes": 9596,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "平板支撑！非常好的核心动作！",
+            "likes": 9027,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "做一个完美的平板支撑练核心！",
+            "likes": 9027,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "拜龙门架不如拜宗主！更高效的腹肌训练",
+            "likes": 7572,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "三步带你高效练出马甲线把腰练细！",
+            "likes": 7198,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "下腹这样练！真的太牛了！",
+            "likes": 6959,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "腹肌这一块儿，还歹是宗主秘法来相助！",
+            "likes": 6657,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          }
+        ],
+        "avg_likes": 26140.117647058825,
+        "top_entries": [
+          {
+            "title": "腰围low一下！加入邪修带你抄近路！",
+            "likes": 119217,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "邪修宗主赐你腹肌！加入邪修带你抄近路！",
+            "likes": 59082,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          },
+          {
+            "title": "比腹肌还帅的鲨鱼肌-前锯肌 正确修炼功法 宗主带你抄近路",
+            "likes": 43196,
+            "category": "腹肌/核心",
+            "platform": "douyin"
+          }
+        ]
+      }
+    },
+    "effectiveness_ranking": [
+      {
+        "hook_type": "反问梗式",
+        "avg_likes": 126211.66666666667,
+        "count": 3
+      },
+      {
+        "hook_type": "感叹堆积式",
+        "avg_likes": 84716.0,
+        "count": 2
+      },
+      {
+        "hook_type": "问题递进式",
+        "avg_likes": 29482.0,
+        "count": 2
+      },
+      {
+        "hook_type": "陈述式",
+        "avg_likes": 26140.117647058825,
+        "count": 17
+      }
+    ]
+  },
+  "platform_analysis": {
+    "by_platform": {
+      "douyin": {
+        "count": 24,
+        "total_likes": 1051413,
+        "categories": {
+          "腹肌/核心": 24
+        },
+        "hooks": {
+          "反问梗式": 3,
+          "感叹堆积式": 2,
+          "陈述式": 17,
+          "问题递进式": 2
+        },
+        "avg_likes": 43808.875,
+        "top_category": "腹肌/核心",
+        "preferred_hook": "陈述式"
+      }
+    }
+  },
+  "cta_type_analysis": {
+    "by_cta_type": {
+      "效果承诺型": {
+        "count": 4,
+        "total_likes": 351211,
+        "avg_likes": 87802.75
+      },
+      "行动鼓励型": {
+        "count": 6,
+        "total_likes": 392320,
+        "avg_likes": 65386.666666666664
+      },
+      "自然收尾型": {
+        "count": 14,
+        "total_likes": 307882,
+        "avg_likes": 21991.571428571428
+      }
+    },
+    "effectiveness_ranking": [
+      {
+        "cta_type": "效果承诺型",
+        "avg_likes": 87802.75,
+        "count": 4
+      },
+      {
+        "cta_type": "行动鼓励型",
+        "avg_likes": 65386.666666666664,
+        "count": 6
+      },
+      {
+        "cta_type": "自然收尾型",
+        "avg_likes": 21991.571428571428,
+        "count": 14
+      }
+    ]
+  },
+  "success_patterns": {
+    "top_20_entries": [
+      {
+        "id": "CL-001",
+        "title": "仰卧起坐？狗都不_！腹肌高效训练！宗主带你抄近路！",
+        "likes": 232149,
+        "category": "腹肌/核心",
+        "hook_type": "反问梗式",
+        "platform": "douyin",
+        "cta_type": "效果承诺型"
+      },
+      {
+        "id": "CL-002",
+        "title": "卷腹？狗都不_！高效练腹！加入邪修带你抄近路！",
+        "likes": 141602,
+        "category": "腹肌/核心",
+        "hook_type": "反问梗式",
+        "platform": "douyin",
+        "cta_type": "自然收尾型"
+      },
+      {
+        "id": "CL-003",
+        "title": "肩胛骨上翘！翼状肩胛，前锯肌激活！加入邪修1秒搞定！",
+        "likes": 120530,
+        "category": "腹肌/核心",
+        "hook_type": "感叹堆积式",
+        "platform": "douyin",
+        "cta_type": "行动鼓励型"
+      },
+      {
+        "id": "CL-004",
+        "title": "腰围low一下！加入邪修带你抄近路！",
+        "likes": 119217,
+        "category": "腹肌/核心",
+        "hook_type": "陈述式",
+        "platform": "douyin",
+        "cta_type": "行动鼓励型"
+      },
+      {
+        "id": "CL-005",
+        "title": "邪修宗主赐你腹肌！加入邪修带你抄近路！",
+        "likes": 59082,
+        "category": "腹肌/核心",
+        "hook_type": "陈述式",
+        "platform": "douyin",
+        "cta_type": "效果承诺型"
+      },
+      {
+        "id": "CL-006",
+        "title": "四肢细，小肚子大！骨盆前倾！练宗主的随时随地修炼功法！",
+        "likes": 48902,
+        "category": "腹肌/核心",
+        "hook_type": "感叹堆积式",
+        "platform": "douyin",
+        "cta_type": "行动鼓励型"
+      },
+      {
+        "id": "CL-007",
+        "title": "比腹肌还帅的鲨鱼肌-前锯肌 正确修炼功法 宗主带你抄近路",
+        "likes": 43196,
+        "category": "腹肌/核心",
+        "hook_type": "陈述式",
+        "platform": "douyin",
+        "cta_type": "自然收尾型"
+      },
+      {
+        "id": "CL-008",
+        "title": "腹肌速成计划！宗主带你更高效的练腹！",
+        "likes": 39143,
+        "category": "腹肌/核心",
+        "hook_type": "陈述式",
+        "platform": "douyin",
+        "cta_type": "行动鼓励型"
+      },
+      {
+        "id": "CL-009",
+        "title": "腰两侧有肉练什么？马甲线怎么练更高效！",
+        "likes": 36197,
+        "category": "腹肌/核心",
+        "hook_type": "问题递进式",
+        "platform": "douyin",
+        "cta_type": "效果承诺型"
+      },
+      {
+        "id": "CL-010",
+        "title": "宗主传你悬垂腹小肚子突出解决功法！",
+        "likes": 35043,
+        "category": "腹肌/核心",
+        "hook_type": "陈述式",
+        "platform": "douyin",
+        "cta_type": "行动鼓励型"
+      },
+      {
+        "id": "CL-011",
+        "title": "这套腹肌强化功法！练出大块儿腹肌！",
+        "likes": 29485,
+        "category": "腹肌/核心",
+        "hook_type": "陈述式",
+        "platform": "douyin",
+        "cta_type": "行动鼓励型"
+      },
+      {
+        "id": "CL-012",
+        "title": "邪修打假第一期！",
+        "likes": 23783,
+        "category": "腹肌/核心",
+        "hook_type": "陈述式",
+        "platform": "douyin",
+        "cta_type": "效果承诺型"
+      },
+      {
+        "id": "CL-013",
+        "title": "减脂到底该怎么吃？符合中国膳食指南更适合国人的膳食策略！",
+        "likes": 22767,
+        "category": "腹肌/核心",
+        "hook_type": "问题递进式",
+        "platform": "douyin",
+        "cta_type": "自然收尾型"
+      },
+      {
+        "id": "CL-014",
+        "title": "在家就想要腹肌？真贪心！我喜欢！",
+        "likes": 15648,
+        "category": "腹肌/核心",
+        "hook_type": "陈述式",
+        "platform": "douyin",
+        "cta_type": "自然收尾型"
+      },
+      {
+        "id": "CL-015",
+        "title": "悬垂举腿这玩意还歹是宗主来！",
+        "likes": 12956,
+        "category": "腹肌/核心",
+        "hook_type": "陈述式",
+        "platform": "douyin",
+        "cta_type": "自然收尾型"
+      },
+      {
+        "id": "CL-016",
+        "title": "告别假小腹！腰围除了减脂可以试一下这样练！",
+        "likes": 10793,
+        "category": "腹肌/核心",
+        "hook_type": "陈述式",
+        "platform": "douyin",
+        "cta_type": "自然收尾型"
+      },
+      {
+        "id": "CL-017",
+        "title": "江湖救急！强化束腰肌宗主带你少走弯路！",
+        "likes": 9596,
+        "category": "腹肌/核心",
+        "hook_type": "陈述式",
+        "platform": "douyin",
+        "cta_type": "自然收尾型"
+      },
+      {
+        "id": "CL-018",
+        "title": "平板支撑！非常好的核心动作！",
+        "likes": 9027,
+        "category": "腹肌/核心",
+        "hook_type": "陈述式",
+        "platform": "douyin",
+        "cta_type": "自然收尾型"
+      },
+      {
+        "id": "CL-019",
+        "title": "做一个完美的平板支撑练核心！",
+        "likes": 9027,
+        "category": "腹肌/核心",
+        "hook_type": "陈述式",
+        "platform": "douyin",
+        "cta_type": "自然收尾型"
+      },
+      {
+        "id": "CL-020",
+        "title": "拜龙门架不如拜宗主！更高效的腹肌训练",
+        "likes": 7572,
+        "category": "腹肌/核心",
+        "hook_type": "陈述式",
+        "platform": "douyin",
+        "cta_type": "自然收尾型"
+      }
+    ],
+    "success_pattern_features": {
+      "most_common_category": "腹肌/核心",
+      "most_common_hook": "陈述式",
+      "most_common_platform": "douyin",
+      "most_common_cta": "自然收尾型"
+    }
+  }
+}

@@ -106,6 +106,7 @@ class OperationsAgent(BaseAgent):
                           platform_data: str = "") -> str:
         """优化一周的发布排期。"""
         posts_text = json.dumps(posts, ensure_ascii=False, indent=2)
+        platform_block = f"## 平台数据参考\n{platform_data}" if platform_data else ""
         user_msg = f"""请优化以下一周的发布排期：
 
 ## 周起始日期
@@ -114,7 +115,7 @@ class OperationsAgent(BaseAgent):
 ## 待排期内容
 {posts_text}
 
-{f"## 平台数据参考\n{platform_data}" if platform_data else ""}
+{platform_block}
 
 请输出：
 1. 优化后的每日发布计划（含具体时间）

@@ -2,7 +2,7 @@
   "campaign": {
     "name": "四维痛点系列首发",
     "date": "2025-07-01 ~ 2025-07-14",
-    "generated_at": "2026-03-30T06:25:31.807467"
+    "generated_at": "2026-03-30T06:52:48.228501"
   },
   "statistics": {
     "total": 14,
@@ -27,7 +27,7 @@
       "dimension": "financial",
       "platform": "xiaohongshu",
       "body_category": "背部",
-      "hook_type": "问题递进式",
+      "hook_type": "感叹堆积式",
       "personality_score": 90.0,
       "file": "数据/文案/草稿/PC-002.md"
     },
@@ -57,7 +57,7 @@
       "dimension": "psychological",
       "platform": "douyin",
       "body_category": "腹肌/核心",
-      "hook_type": "问题递进式",
+      "hook_type": "反问梗式",
       "personality_score": 90.0,
       "file": "数据/文案/草稿/PC-005.md"
     },
@@ -67,7 +67,7 @@
       "dimension": "psychological",
       "platform": "xiaohongshu",
       "body_category": "腹肌/核心",
-      "hook_type": "陈述式",
+      "hook_type": "感叹堆积式",
       "personality_score": 90.0,
       "file": "数据/文案/草稿/PC-006.md"
     },
@@ -87,7 +87,7 @@
       "dimension": "social",
       "platform": "douyin",
       "body_category": "胸肌/肩部",
-      "hook_type": "问题递进式",
+      "hook_type": "感叹堆积式",
       "personality_score": 90.0,
       "file": "数据/文案/草稿/PC-008.md"
     },
@@ -107,7 +107,7 @@
       "dimension": "social",
       "platform": "douyin",
       "body_category": "胸肌/肩部/腹肌",
-      "hook_type": "陈述式",
+      "hook_type": "反问梗式",
       "personality_score": 90.0,
       "file": "数据/文案/草稿/PC-010.md"
     },
@@ -127,7 +127,7 @@
       "dimension": "health",
       "platform": "xiaohongshu",
       "body_category": "体态纠正/核心",
-      "hook_type": "陈述式",
+      "hook_type": "感叹堆积式",
       "personality_score": 90.0,
       "file": "数据/文案/草稿/PC-012.md"
     },
