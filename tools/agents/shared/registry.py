@@ -69,6 +69,15 @@ AGENT_REGISTRY = {
         "loads_library": False,
         "loads_style_dna": False,
     },
+    "agency": {
+        "module": "tools.agents.agency",
+        "class": "AgencyAgent",
+        "description": "代运营 Agent（B1阶段）",
+        "required_docs": ["brand_voice", "content_pillars"],
+        "loads_library": False,
+        "loads_style_dna": False,
+        "multi_account_support": True,
+    },
 }
 
 
