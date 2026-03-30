@@ -73,8 +73,9 @@ class CopywriterAgent(BaseAgent):
         "sect_ip": ("高", "大量使用宗门体系，入门仪式、宗训引用、弟子互动"),
     }
 
-    def _build_system_prompt(self) -> str:
-        library = self._load_library()
+    def _build_system_prompt(self, topic: str = "", platform: str = "",
+                               pillar: str = "") -> str:
+        library = self._load_library(topic=topic, platform=platform, pillar=pillar)
         library_block = f"\n<copy_library>\n{library}\n</copy_library>" if library else ""
         style_dna = self._load_style_dna()
         style_dna_block = f"\n<写作风格DNA>\n{style_dna}\n</写作风格DNA>" if style_dna else ""
@@ -177,7 +178,13 @@ class CopywriterAgent(BaseAgent):
 
 请严格按照以上规格和品牌规范，输出完整的文案方案。"""
 
-        result = self.run(user_msg)
+        system_prompt = self._build_system_prompt(
+            topic=topic, platform=platform, pillar=pillar
+        )
+        result = self.run_with_history(
+            [{"role": "user", "content": user_msg}],
+            system_prompt=system_prompt,
+        )
 
         if save:
             path = self.save_draft(result, {
@@ -222,7 +229,13 @@ class CopywriterAgent(BaseAgent):
 
 注意：同一选题在不同平台的表达方式应该有明显差异，不是简单改字数，而是根据平台用户习惯重新构思。"""
 
-        result = self.run(user_msg)
+        system_prompt = self._build_system_prompt(
+            topic=topic, platform="all", pillar=pillar
+        )
+        result = self.run_with_history(
+            [{"role": "user", "content": user_msg}],
+            system_prompt=system_prompt,
+        )
 
         if save:
             path = self.save_draft(result, {

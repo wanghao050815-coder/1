@@ -109,6 +109,28 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: deadline
+    attributes:
+      label: 截止日期
+      description: 文案需要在何时完成？格式：YYYY-MM-DD
+      placeholder: 例：2026-04-15
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      description: 本需求的优先级
+      options:
+        - P0 紧急（今日内完成）
+        - P1 高优（24小时内完成）
+        - P2 正常（3个工作日内）
+        - P3 低优（按排期安排）
+    validations:
+      required: true
+
   - type: dropdown
     id: urgency
     attributes:
@@ -146,6 +168,21 @@ body:
       placeholder: |
         例：这篇文案需要配合周三的视频发布，请在周二前完成。
         注意避免提及具体品牌名，因为还在谈合作。
+      render: markdown
+    validations:
+      required: false
+
+  - type: textarea
+    id: success-metrics
+    attributes:
+      label: 成功指标（可选）
+      description: 本次文案的预期效果指标，用于后续复盘评估
+      placeholder: |
+        例：
+        - 预期完播率 > 40%
+        - 预期点赞数 > 5000
+        - 预期评论数 > 200
+        - 转化目标：引导 100+ 新关注
       render: markdown
     validations:
       required: false

@@ -300,6 +300,69 @@ def approve(input_path, engagement, model):
     render(result)
 
 
+# ── Operations Agent (运营部门) ───────────────────────
+
+
+@cli.command()
+@click.option("--followers", "-f", required=True, type=int, help="当前粉丝数")
+@click.option("--growth-rate", "-g", default=0.0, type=float, help="月增长率（如0.1=10%）")
+@click.option("--engagement-rate", "-e", default=0.0, type=float, help="互动率")
+@click.option("--context", "-c", default="", help="补充信息")
+@click.option("--model", "-m", default=None, help="模型覆盖")
+def diagnose(followers, growth_rate, engagement_rate, context, model):
+    """🎯 账号诊断 — Operations Agent"""
+    from .operations import OperationsAgent
+
+    console.print(f"\n[bold gold1]⚔️ 邪修宗·运营部[/bold gold1]")
+    console.print(f"粉丝: [cyan]{followers:,}[/cyan] | 月增长: [green]{growth_rate:.1%}[/green]\n")
+
+    with console.status("[bold gold1]诊断中...[/bold gold1]"):
+        agent = OperationsAgent(model=model) if model else OperationsAgent()
+        result = agent.diagnose_stage(
+            followers=followers, growth_rate=growth_rate,
+            engagement_rate=engagement_rate, extra_context=context,
+        )
+
+    render(result)
+
+
+@cli.command("ops-plan")
+@click.option("--year", "-y", required=True, type=int, help="年份")
+@click.option("--month", "-M", required=True, type=int, help="月份")
+@click.option("--stage", "-s", default="growth", help="账号阶段")
+@click.option("--context", "-c", default="", help="补充背景")
+@click.option("--model", "-m", default=None, help="模型覆盖")
+def ops_plan(year, month, stage, context, model):
+    """📋 月度运营计划 — Operations Agent"""
+    from .operations import OperationsAgent
+
+    console.print(f"\n[bold gold1]⚔️ 邪修宗·运营规划[/bold gold1]")
+    console.print(f"规划: [cyan]{year}年{month}月[/cyan] | 阶段: [green]{stage}[/green]\n")
+
+    with console.status("[bold gold1]规划中...[/bold gold1]"):
+        agent = OperationsAgent(model=model) if model else OperationsAgent()
+        result = agent.plan_month(year=year, month=month, stage=stage, context=context)
+
+    render(result)
+
+
+@cli.command("ops-review")
+@click.option("--input", "-i", "input_path", required=True, help="运营数据文件路径")
+@click.option("--model", "-m", default=None, help="模型覆盖")
+def ops_review(input_path, model):
+    """📊 运营复盘 — Operations Agent"""
+    from .operations import OperationsAgent
+
+    data = read_input(input_path)
+    console.print(f"\n[bold gold1]⚔️ 邪修宗·运营复盘[/bold gold1]\n")
+
+    with console.status("[bold gold1]分析中...[/bold gold1]"):
+        agent = OperationsAgent(model=model) if model else OperationsAgent()
+        result = agent.review_performance(data)
+
+    render(result)
+
+
 # ── Coach Agent (会员私教) ────────────────────────────
 
 

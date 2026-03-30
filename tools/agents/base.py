@@ -51,29 +51,76 @@ class BaseAgent:
     def _load_config(self, name: str) -> str:
         return self._load_doc(f"tools/配置/{name}.yaml")
 
-    def _load_library(self) -> str:
-        """加载历史高互动文案库（支持 .md 和 .json）。"""
+    def _load_library(self, topic: str = "", platform: str = "",
+                       pillar: str = "", max_entries: int = 30) -> str:
+        """加载历史高互动文案库（支持相关性检索和分类索引）。
+
+        Args:
+            topic: 当前选题关键词，用于相关性筛选
+            platform: 目标平台，用于平台筛选
+            pillar: 内容支柱，用于分类筛选
+            max_entries: 最大返回条目数（控制 token 开销）
+        """
         import json as _json
         library_dir = self.repo_root / "数据" / "文案" / "素材库"
         if not library_dir.exists():
             return ""
-        texts = []
-        for f in sorted(library_dir.glob("*.json")):
+
+        # 加载主库文件 copy-library.json
+        main_lib = library_dir / "copy-library.json"
+        entries = []
+        if main_lib.exists():
             try:
-                data = _json.loads(f.read_text(encoding="utf-8"))
-                entry = f"### [{data.get('platform', '?')}] {data.get('title', f.stem)}"
-                entry += f"\n钩子: {data.get('hook', '')}"
-                entry += f"\nCTA: {data.get('cta', '')}"
-                entry += f"\n风格: {data.get('style_notes', '')}"
-                entry += f"\n\n{data.get('body', '')}"
-                texts.append(entry)
+                data = _json.loads(main_lib.read_text(encoding="utf-8"))
+                entries = data.get("entries", [])
             except (_json.JSONDecodeError, KeyError):
                 pass
-        for f in sorted(library_dir.glob("*.md")):
-            if f.name.lower() == "readme.md":
-                continue
-            texts.append(f"### {f.stem}\n{f.read_text(encoding='utf-8')}")
-        return "\n\n---\n\n".join(texts) if texts else ""
+
+        if not entries:
+            return ""
+
+        # 相关性筛选：按 platform、pillar、topic 关键词过滤
+        filtered = entries
+        if platform:
+            platform_match = [e for e in filtered if e.get("platform", "") == platform]
+            if platform_match:
+                filtered = platform_match
+        if pillar:
+            pillar_match = [e for e in filtered if e.get("pillar", "") == pillar]
+            if pillar_match:
+                filtered = pillar_match
+        if topic:
+            keywords = [w for w in topic.split() if len(w) > 1]
+            if keywords:
+                topic_match = [
+                    e for e in filtered
+                    if any(kw in e.get("title", "") or kw in e.get("content", "")
+                           or kw in e.get("category", "") for kw in keywords)
+                ]
+                if topic_match:
+                    filtered = topic_match
+
+        # 按互动数据排序（likes 降序），取 top N
+        filtered.sort(key=lambda x: x.get("likes", 0), reverse=True)
+        top_entries = filtered[:max_entries]
+
+        # 格式化为紧凑的文本摘要
+        texts = []
+        for e in top_entries:
+            entry = f"### [{e.get('category', '?')}] {e.get('title', '无标题')}"
+            entry += f"\n赞: {e.get('likes', 0):,} | 评: {e.get('comments', 0):,} | 转: {e.get('shares', 0):,}"
+            if e.get("hook_type"):
+                entry += f"\n钩子类型: {e['hook_type']}"
+            if e.get("cta_type"):
+                entry += f"\nCTA类型: {e['cta_type']}"
+            content = e.get("content", "")
+            if len(content) > 150:
+                content = content[:150] + "..."
+            entry += f"\n正文: {content}"
+            texts.append(entry)
+
+        header = f"（共 {len(entries)} 条，筛选后展示 {len(top_entries)} 条高互动文案）"
+        return header + "\n\n" + "\n\n---\n\n".join(texts)
 
     def _load_style_dna(self) -> str:
         """加载风格 DNA 手册（如存在）。"""
