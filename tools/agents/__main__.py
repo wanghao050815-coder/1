@@ -47,6 +47,11 @@ def cli():
 @cli.command()
 @click.option("--topic", "-t", required=True, help="选题标题/描述")
 @click.option(
+    "--account", "-a", default="B1",
+    type=click.Choice(["B1", "B2", "B3"]),
+    help="目标账号（默认 B1）",
+)
+@click.option(
     "--platform", "-p", default="douyin",
     type=click.Choice(["douyin", "xiaohongshu", "weibo", "bilibili", "wechat", "all"]),
     help="目标平台",
@@ -60,15 +65,15 @@ def cli():
 @click.option("--tone", default="", help="语气指定（可选）")
 @click.option("--no-save", is_flag=True, help="不保存草稿")
 @click.option("--model", "-m", default=None, help="模型覆盖（如 claude-opus-4-20250918）")
-def copywrite(topic, platform, pillar, brief, tone, no_save, model):
+def copywrite(topic, account, platform, pillar, brief, tone, no_save, model):
     """✍️  生成文案 — Copywriter Agent"""
     from .copywriter import CopywriterAgent
 
     console.print(f"\n[bold gold1]⚔️ 邪修宗·文案部[/bold gold1]")
-    console.print(f"选题: [cyan]{topic}[/cyan] | 平台: [green]{platform}[/green] | 支柱: [yellow]{pillar}[/yellow]\n")
+    console.print(f"账号: [magenta]{account}[/magenta] | 选题: [cyan]{topic}[/cyan] | 平台: [green]{platform}[/green] | 支柱: [yellow]{pillar}[/yellow]\n")
 
     with console.status("[bold gold1]修炼中...文案生成中...[/bold gold1]"):
-        agent = CopywriterAgent(model=model) if model else CopywriterAgent()
+        agent = CopywriterAgent(model=model, account_id=account) if model else CopywriterAgent(account_id=account)
         result = agent.generate(
             topic=topic, platform=platform, pillar=pillar,
             brief=brief, tone=tone, save=not no_save,
@@ -359,6 +364,85 @@ def ops_review(input_path, model):
     with console.status("[bold gold1]分析中...[/bold gold1]"):
         agent = OperationsAgent(model=model) if model else OperationsAgent()
         result = agent.review_performance(data)
+
+    render(result)
+
+
+# ── Agency Agent (代运营) ─────────────────────────────
+
+
+@cli.command(name="agency-weekly")
+@click.option("--account", "-a", default="B1", type=click.Choice(["B1", "B2", "B3"]), help="目标账号")
+@click.option("--input", "-i", "input_path", required=True, help="本周数据文件路径")
+@click.option("--model", "-m", default=None, help="模型覆盖")
+def agency_weekly(account, input_path, model):
+    """📋 代运营周报 — Agency Agent"""
+    from .agency import AgencyAgent
+
+    data = read_input(input_path)
+    console.print(f"\n[bold gold1]⚔️ 邪修宗·代运营部[/bold gold1]")
+    console.print(f"账号: [magenta]{account}[/magenta]\n")
+
+    with console.status("[bold gold1]生成周报中...[/bold gold1]"):
+        agent = AgencyAgent(model=model, account_id=account) if model else AgencyAgent(account_id=account)
+        result = agent.generate_weekly_report(data)
+
+    render(result)
+
+
+@cli.command(name="agency-monthly")
+@click.option("--account", "-a", default="B1", type=click.Choice(["B1", "B2", "B3"]), help="目标账号")
+@click.option("--weekly", "-w", "weekly_path", required=True, help="周报汇总文件")
+@click.option("--kpi", "-k", "kpi_path", required=True, help="KPI 数据文件")
+@click.option("--model", "-m", default=None, help="模型覆盖")
+def agency_monthly(account, weekly_path, kpi_path, model):
+    """📊 代运营月报 — Agency Agent"""
+    from .agency import AgencyAgent
+
+    weekly_data = read_input(weekly_path)
+    kpi_data = read_input(kpi_path)
+    console.print(f"\n[bold gold1]⚔️ 邪修宗·月报生成[/bold gold1]")
+    console.print(f"账号: [magenta]{account}[/magenta]\n")
+
+    with console.status("[bold gold1]生成月报中...[/bold gold1]"):
+        agent = AgencyAgent(model=model, account_id=account) if model else AgencyAgent(account_id=account)
+        result = agent.generate_monthly_report(weekly_data, kpi_data)
+
+    render(result)
+
+
+@cli.command(name="agency-kpi")
+@click.option("--account", "-a", default="B1", type=click.Choice(["B1", "B2", "B3"]), help="目标账号")
+@click.option("--input", "-i", "input_path", required=True, help="KPI 追踪数据文件")
+@click.option("--model", "-m", default=None, help="模型覆盖")
+def agency_kpi(account, input_path, model):
+    """📈 KPI 总结 — 目标达成情况和预警"""
+    from .agency import AgencyAgent
+
+    data = read_input(input_path)
+    console.print(f"\n[bold gold1]⚔️ 邪修宗·KPI总结[/bold gold1]")
+    console.print(f"账号: [magenta]{account}[/magenta]\n")
+
+    with console.status("[bold gold1]分析中...[/bold gold1]"):
+        agent = AgencyAgent(model=model, account_id=account) if model else AgencyAgent(account_id=account)
+        result = agent.generate_kpi_summary(data)
+
+    render(result)
+
+
+@cli.command(name="agency-insights")
+@click.option("--input", "-i", "input_path", required=True, help="多账号数据对比文件")
+@click.option("--model", "-m", default=None, help="模型覆盖")
+def agency_insights(input_path, model):
+    """🔍 跨账号洞察 — B1/B2/B3 数据对比分析"""
+    from .agency import AgencyAgent
+
+    data = read_input(input_path)
+    console.print(f"\n[bold gold1]⚔️ 邪修宗·多账号分析[/bold gold1]\n")
+
+    with console.status("[bold gold1]分析中...[/bold gold1]"):
+        agent = AgencyAgent()  # 跨账号分析不需要指定单个账号
+        result = agent.cross_account_insights(data)
 
     render(result)
 
