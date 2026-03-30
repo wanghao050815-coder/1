@@ -44,6 +44,25 @@ team:
         - outlier_detected
         - kpi_alert
 
+    - name: "文案编辑"
+      role: "copywriter"
+      github_username: "[github_username]"
+      notify_on:
+        - copywriting_request
+        - copy_revision_needed
+        - copy_approved
+        - brief_ready
+        - platform_copy_due
+
+    - name: "会员私教"
+      role: "member_coach"
+      github_username: "[github_username]"
+      notify_on:
+        - new_member_intake
+        - plan_adjustment_request
+        - progress_milestone
+        - member_feedback
+
 roles:
   creator:
     description: "博主本人，负责出镜、最终审核、敏感内容处理"
@@ -74,6 +93,22 @@ roles:
       - pull_analytics
       - generate_reports
       - manage_kpis
+  copywriter:
+    description: "负责各平台文案撰写、标题优化、脚本编写、话术库维护"
+    permissions:
+      - write_copy
+      - manage_copy_library
+      - review_copy
+      - submit_copy_for_approval
+
+  member_coach:
+    description: "负责线上会员1对1服务：训练计划定制、饮食方案、体态纠正、阶段评估"
+    permissions:
+      - write_training_plans
+      - write_diet_plans
+      - read_user_profiles
+      - update_user_progress
+      - adjust_plans
 
 notification_channels:
   wecom_webhook: "[企业微信Webhook地址]"

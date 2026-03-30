@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "type": "multi-account-config",
+    "version": "1.0",
+    "created_at": "2026-04-01T00:00:00Z",
+    "updated_at": "2026-04-01T00:00:00Z",
+    "description": "邪修宗多账号管理配置"
+  },
+  "accounts": {
+    "B1": {
+      "name": "邪健仙主号",
+      "type": "master",
+      "permission": "full",
+      "platforms": {
+        "douyin": "邪健仙",
+        "xiaohongshu": "邪健仙official",
+        "bilibili": "邪健仙"
+      },
+      "subs": ["B2", "B3"],
+      "created_at": "2026-04-01T00:00:00Z",
+      "updated_at": "2026-04-01T00:00:00Z",
+      "metadata": {
+        "stage": "growth",
+        "followers": 180000,
+        "category": "fitness",
+        "description": "邪修宗主号，核心内容频道"
+      }
+    },
+    "B2": {
+      "name": "邪修宗男团号",
+      "type": "sub",
+      "permission": "publish",
+      "master": "B1",
+      "platforms": {
+        "douyin": "邪修宗男团"
+      },
+      "subs": [],
+      "created_at": "2026-04-01T00:00:00Z",
+      "updated_at": "2026-04-01T00:00:00Z",
+      "metadata": {
+        "stage": "cold_start",
+        "followers": 5000,
+        "category": "fitness",
+        "description": "男性健身团队账号，由B1主号运营"
+      }
+    },
+    "B3": {
+      "name": "邪修宗女团号",
+      "type": "sub",
+      "permission": "publish",
+      "master": "B1",
+      "platforms": {
+        "douyin": "邪修宗女团"
+      },
+      "subs": [],
+      "created_at": "2026-04-01T00:00:00Z",
+      "updated_at": "2026-04-01T00:00:00Z",
+      "metadata": {
+        "stage": "cold_start",
+        "followers": 3000,
+        "category": "fitness",
+        "description": "女性健身团队账号，由B1主号运营"
+      }
+    }
+  }
+}

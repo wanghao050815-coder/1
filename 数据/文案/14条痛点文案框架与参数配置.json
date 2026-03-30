@@ -1,0 +1,495 @@
+{
+  "campaign_name": "四维痛点系列首发",
+  "campaign_date": "2025-07-01 ~ 2025-07-14",
+  "total_copies": 14,
+  "distribution": {
+    "financial": 4,
+    "psychological": 3,
+    "social": 4,
+    "health": 3
+  },
+  "publishing_platforms": {
+    "douyin": 9,
+    "xiaohongshu": 5
+  },
+  "derivation_basis": "基于邪修宗人设分析和337条真实文案数据的高赞模式，推导出以下14条文案框架。每条文案的设计都遵循：1) 痛点与宗门IP的关联，2) 秘法的可信度，3) 人设的一致性。",
+  "copies": [
+    {
+      "id": "PC-001",
+      "title": "背阔肌1厘米，年薪差10万？加入邪修带你抄近路！",
+      "dimension": "financial",
+      "body_category": "背部",
+      "platform": "douyin",
+      "hook_type": "反问梗式",
+      "cta_type": "效果承诺型",
+      "pillar": "training",
+      "framework": {
+        "title": "背阔肌1厘米，年薪差10万？加入邪修带你抄近路！",
+        "open": "对于我们邪修来说啊，背部怎么练？这么跟你说啊，背阔肌展开和不展开，直接影响你的气质。",
+        "problem": "你仔细看，那些升职的同事，站姿挺拔，穿衣显身材。反之看看自己，驼背溜肩，再好看的衣服都穿出了廉价感。",
+        "turning_point": "对于我们邪修来说，背部不是什么难题，宗主传你一个秘法。",
+        "solution": "咱们随便一趴身体，一撑胸部，手臂上举，感受背阔肌的收缩，保持最大幅度重复。不用太多，你做完就有感觉。",
+        "cta": "你就这样做，背部展开，气质立刻变。"
+      },
+      "pain_points": ["职场气质竞争力", "第一印象"],
+      "personality_traits": ["权威", "快速解决", "自信"],
+      "expected_metrics": {
+        "likes": "50K-80K",
+        "comments": "800-1200",
+        "shares": "5000-8000"
+      },
+      "copywriter_params": {
+        "topic": "背阔肌与职场竞争力的关系",
+        "brief": "通过背部训练的秘法，强调形体改变如何提升职场气质和竞争力。强化宗主的权威，给出明确动作指令。",
+        "tone": "权威、快速、解决问题",
+        "key_phrases": ["年薪", "气质", "秘法", "宗主", "抄近路"],
+        "avoid_phrases": ["医学证明", "建议您", "可能改善"],
+        "target_audience": "职场白领，追求形象提升"
+      }
+    },
+    {
+      "id": "PC-002",
+      "title": "【职场背肌】气质是无形的财富，这个部位弱，升职就难",
+      "dimension": "financial",
+      "body_category": "背部",
+      "platform": "xiaohongshu",
+      "hook_type": "问题递进式",
+      "cta_type": "行动指引型",
+      "pillar": "training",
+      "framework": {
+        "title": "【职场背肌】气质是无形的财富，这个部位弱，升职就难",
+        "open": "你有没有发现，职场上更容易升职的人，往往都有一个特点：站姿好看，背部挺拔。",
+        "problem": "而很多人自己背部没有线条，驼背圆肩，穿什么衣服都显廉价。结果呢？面试被压低工资，职场被忽视，升职也没份儿。",
+        "turning_point": "其实这不是你的问题，而是背部肌肉的问题。背部强化了，整个气质就变了。",
+        "solution": "给你3个宗主的秘法：1) [动作1]，感受背部发力；2) [动作2]，强化背阔肌宽度；3) [动作3]，雕刻背部线条。",
+        "cta": "保存这条笔记，7天打卡，你就能感受到气质的变化。"
+      },
+      "pain_points": ["职场形象焦虑", "升职困境"],
+      "personality_traits": ["分析", "深度", "实用"],
+      "expected_metrics": {
+        "saves": "1000-1500",
+        "likes": "2000-3000",
+        "comments": "300-500"
+      },
+      "copywriter_params": {
+        "topic": "背部力量与职场成功的深层关联",
+        "brief": "用数据和逻辑分析背部强化如何影响职场竞争力，提供3个具体训练秘法，强调长期效果而非快速变化。",
+        "tone": "分析、实用、关怀",
+        "key_phrases": ["气质", "升职", "秘法", "线条", "7天打卡"],
+        "avoid_phrases": ["立刻改变", "医学证实", "所有人都"],
+        "target_audience": "追求职场进步的女性和职场人士"
+      }
+    },
+    {
+      "id": "PC-003",
+      "title": "为什么老板重用有身材的人？这个秘密你必须知道",
+      "dimension": "financial",
+      "body_category": "体态纠正",
+      "platform": "douyin",
+      "hook_type": "问题递进式",
+      "cta_type": "效果承诺型",
+      "pillar": "training",
+      "framework": {
+        "title": "为什么老板重用有身材的人？这个秘密你必须知道",
+        "open": "你有没有想过，为什么老板重用的人往往都有身材？",
+        "problem": "不是因为他们颜值高，而是因为他们传递了一个信号：自律、自信、有执行力。身材差的人，无论能力再强，老板也会心里打个问号。",
+        "turning_point": "所以对于我们邪修来说，练身材就是在提升职场竞争力，宗主教你最快的秘法。",
+        "solution": "核心训练3分钟，就能激活整个身体的自信感。[动作指令]。",
+        "cta": "你就这样做，身材改变，气场也跟着变，升职机会自然就来了。"
+      },
+      "pain_points": ["职场被看不起", "自信缺失"],
+      "personality_traits": ["洞察", "直率", "权威"],
+      "expected_metrics": {
+        "likes": "60K-100K",
+        "comments": "1000-1500",
+        "shares": "8000-12000"
+      },
+      "copywriter_params": {
+        "topic": "身材与职场机会的因果关系",
+        "brief": "揭露职场的潜规则：身材不仅是形象，更是能力的象征。用宗主的权威承诺快速有效的秘法。",
+        "tone": "洞察、直率、有力",
+        "key_phrases": ["秘密", "秘法", "自信", "升职", "邪修"],
+        "avoid_phrases": ["科学证明", "所有老板都", "直接影响工资"],
+        "target_audience": "职场中层以上、追求自我提升"
+      }
+    },
+    {
+      "id": "PC-004",
+      "title": "【职业蜕变】3个月身材改变，职场竞争力提升的秘密",
+      "dimension": "financial",
+      "body_category": "综合",
+      "platform": "xiaohongshu",
+      "hook_type": "陈述式",
+      "cta_type": "行动指引型",
+      "pillar": "training",
+      "framework": {
+        "title": "【职业蜕变】3个月身材改变，职场竞争力提升的秘密",
+        "open": "有粉丝反馈：从宗门学习3个月后，不仅身材改变了，职场也变了。",
+        "problem": "原本被忽视，现在被看见。原本工资谈不动，现在有了话语权。这是为什么？",
+        "turning_point": "因为身材改变带来的不仅是外表，更是整个人的气场和自信。",
+        "solution": "这3个月的计划包括：第1月基础秘法打造底子，第2月核心强化提升气质，第3月细节雕刻完成蜕变。",
+        "cta": "点击保存，跟着宗主的3个月计划，你也能经历这样的蜕变。"
+      },
+      "pain_points": ["职场焦虑", "期望改变"],
+      "personality_traits": ["循序渐进", "可验证", "鼓励"],
+      "expected_metrics": {
+        "saves": "1500-2000",
+        "likes": "3000-4000",
+        "comments": "400-600"
+      },
+      "copywriter_params": {
+        "topic": "3个月职业蜕变计划",
+        "brief": "分阶段展示身材改变如何带来职场竞争力提升，用真实故事和长期计划强化宗门的专业性。",
+        "tone": "鼓励、实用、专业",
+        "key_phrases": ["蜕变", "秘法", "3个月", "气场", "竞争力"],
+        "avoid_phrases": ["保证升职", "医学改变", "所有人都"],
+        "target_audience": "职场女性，追求长期改变"
+      }
+    },
+    {
+      "id": "PC-005",
+      "title": "你还在为自己的身体自卑？这个秘法改变了100个人",
+      "dimension": "psychological",
+      "body_category": "腹肌/核心",
+      "platform": "douyin",
+      "hook_type": "问题递进式",
+      "cta_type": "效果承诺型",
+      "pillar": "training",
+      "framework": {
+        "title": "你还在为自己的身体自卑？这个秘法改变了100个人",
+        "open": "对于我们邪修来说，自卑不是心理问题，而是身体问题。",
+        "problem": "当你看镜子时感到自卑，那其实是身体在告诉你：我还没有准备好。腹肌没有，核心没有力，整个人都没有自信。",
+        "turning_point": "宗主有个秘法，改变了100个人的自卑感。",
+        "solution": "很简单：[核心训练动作]。做完这个，你就能感受到身体的力量，自信心自然就来了。",
+        "cta": "你就这样做，14天你就能照镜子时笑出来。"
+      },
+      "pain_points": ["身体焦虑", "自卑心理"],
+      "personality_traits": ["理解", "直接", "有效"],
+      "expected_metrics": {
+        "likes": "45K-70K",
+        "comments": "900-1300",
+        "shares": "6000-9000"
+      },
+      "copywriter_params": {
+        "topic": "从身体改变到心理蜕变的过程",
+        "brief": "将自卑转化为身体问题而非心理问题，给出明确的秘法和时间承诺，强化宗主的理解和有效性。",
+        "tone": "理解、直接、赋能",
+        "key_phrases": ["自卑", "秘法", "100个人", "自信", "邪修"],
+        "avoid_phrases": ["心理治疗", "医学改善", "完全消除"],
+        "target_audience": "对身体不自信的人群"
+      }
+    },
+    {
+      "id": "PC-006",
+      "title": "30天自信心重塑计划，从身体改变开始",
+      "dimension": "psychological",
+      "body_category": "腹肌/核心",
+      "platform": "xiaohongshu",
+      "hook_type": "陈述式",
+      "cta_type": "行动指引型",
+      "pillar": "training",
+      "framework": {
+        "title": "30天自信心重塑计划，从身体改变开始",
+        "open": "自信不是心理学家给的，而是从身体改变开始的。",
+        "problem": "很多人觉得自己缺乏自信，其实是身体的力量不够。当你的核心力量不足时，你的脊椎是驼的，你的气场是弱的。",
+        "turning_point": "所以宗主设计了这个30天计划：通过身体改变，重塑心理自信。",
+        "solution": "第1周：基础激活，唤醒身体的力量感；第2-3周：循序渐进，强化核心；第4周：巩固和细化，感受完全蜕变。",
+        "cta": "保存这个计划，跟着宗主30天，你就是下一个自信的人。"
+      },
+      "pain_points": ["心理蜕变期望", "长期改变"],
+      "personality_traits": ["系统", "科学", "鼓励"],
+      "expected_metrics": {
+        "saves": "2000-2500",
+        "likes": "3500-4500",
+        "comments": "500-700"
+      },
+      "copywriter_params": {
+        "topic": "30天自信心重塑的系统化计划",
+        "brief": "用科学的周期划分，强调身体改变的心理学效应，提供详细的阶段目标和期望。",
+        "tone": "系统、科学、支持",
+        "key_phrases": ["自信", "30天", "秘法", "核心", "蜕变"],
+        "avoid_phrases": ["心理治疗", "完全改变", "永久消除"],
+        "target_audience": "追求自我改变的人，特别是女性"
+      }
+    },
+    {
+      "id": "PC-007",
+      "title": "从自卑到自信的44天秘法，宗主教你",
+      "dimension": "psychological",
+      "body_category": "综合",
+      "platform": "douyin",
+      "hook_type": "反问梗式",
+      "cta_type": "效果承诺型",
+      "pillar": "training",
+      "framework": {
+        "title": "从自卑到自信的44天秘法，宗主教你",
+        "open": "自卑？狗都不_！邪修有秘法。",
+        "problem": "很多人自卑其实不是心理问题，是身体在告诉你：还不够好。当你的身体有力量时，你看任何人都敢直视。",
+        "turning_point": "对于我们邪修来说，44天就够了。",
+        "solution": "[详细的44天训练安排]，每一天都有明确的目标和动作。",
+        "cta": "你就这样坚持44天，你就不是那个自卑的人了。"
+      },
+      "pain_points": ["深层自卑", "需要外部验证"],
+      "personality_traits": ["强势", "承诺", "秘法"],
+      "expected_metrics": {
+        "likes": "55K-85K",
+        "comments": "1000-1500",
+        "shares": "7000-10000"
+      },
+      "copywriter_params": {
+        "topic": "44天自卑到自信的完整秘法",
+        "brief": "用强势的反问梗开局，给出明确的时间承诺和具体计划，强调宗主的秘法效力。",
+        "tone": "强势、明确、赋能",
+        "key_phrases": ["自卑", "44天", "秘法", "直视", "邪修"],
+        "avoid_phrases": ["心理咨询", "医学治疗", "绝对"],
+        "target_audience": "深度自卑的人群，需要外部验证"
+      }
+    },
+    {
+      "id": "PC-008",
+      "title": "吸引力提升的生物学原理，这就是为什么他更受欢迎",
+      "dimension": "social",
+      "body_category": "胸肌/肩部",
+      "platform": "douyin",
+      "hook_type": "问题递进式",
+      "cta_type": "效果承诺型",
+      "pillar": "training",
+      "framework": {
+        "title": "吸引力提升的生物学原理，这就是为什么他更受欢迎",
+        "open": "为什么同样的人，有的更受欢迎，有的被忽视？",
+        "problem": "因为身体的宽度和线条会激发生物学吸引力。胸肌发达、肩膀宽阔的人，在任何场合都更容易被看见。",
+        "turning_point": "对于我们邪修来说，吸引力就是一个秘法的问题。",
+        "solution": "[胸肌和肩部训练的秘法]，14天你的肩膀就有了宽度感。",
+        "cta": "你就这样做，下次聚会你就是被关注的那个人。"
+      },
+      "pain_points": ["社交被忽视", "吸引力缺失"],
+      "personality_traits": ["科学", "直接", "有效"],
+      "expected_metrics": {
+        "likes": "65K-95K",
+        "comments": "1200-1600",
+        "shares": "9000-13000"
+      },
+      "copywriter_params": {
+        "topic": "身体形态与吸引力的因果关系",
+        "brief": "用生物学原理解释身体宽度对吸引力的影响，提供具体的训练秘法和时间承诺。",
+        "tone": "科学、直接、性感",
+        "key_phrases": ["吸引力", "秘法", "胸肌", "肩膀", "邪修"],
+        "avoid_phrases": ["医学证明", "100%吸引", "所有人"],
+        "target_audience": "追求提升吸引力的男性和女性"
+      }
+    },
+    {
+      "id": "PC-009",
+      "title": "为什么健身的人更受欢迎？这3个原因你必须知道",
+      "dimension": "social",
+      "body_category": "综合",
+      "platform": "xiaohongshu",
+      "hook_type": "问题递进式",
+      "cta_type": "行动指引型",
+      "pillar": "training",
+      "framework": {
+        "title": "为什么健身的人更受欢迎？这3个原因你必须知道",
+        "open": "你有没有注意到，健身的人在社交场合往往更自在、更受欢迎？",
+        "problem": "不是因为他们颜值高，而是有3个隐藏原因：1) 身体的力量感传递了自信；2) 挺拔的姿态改变了气场；3) 坚持训练的自律感很有魅力。",
+        "turning_point": "这些都是可以通过宗主的秘法快速获得的。",
+        "solution": "[具体的训练方案]，不仅改变身体，更改变气场。",
+        "cta": "保存这篇笔记，跟着宗主训练，你也能成为那个更受欢迎的人。"
+      },
+      "pain_points": ["社交自信缺失", "被忽视感"],
+      "personality_traits": ["分析", "实用", "赋能"],
+      "expected_metrics": {
+        "saves": "1800-2200",
+        "likes": "3500-4500",
+        "comments": "500-700"
+      },
+      "copywriter_params": {
+        "topic": "健身对社交吸引力的多维影响",
+        "brief": "分析健身如何从身体、气场、自律等多个维度提升社交吸引力，强调宗门秘法的综合效果。",
+        "tone": "分析、实用、鼓励",
+        "key_phrases": ["受欢迎", "吸引力", "自信", "气场", "秘法"],
+        "avoid_phrases": ["100%受欢迎", "所有人都", "医学证明"],
+        "target_audience": "追求社交改善和吸引力提升的人"
+      }
+    },
+    {
+      "id": "PC-010",
+      "title": "约到心仪的人的秘密，从改变身材开始",
+      "dimension": "social",
+      "body_category": "胸肌/肩部/腹肌",
+      "platform": "douyin",
+      "hook_type": "陈述式",
+      "cta_type": "效果承诺型",
+      "pillar": "training",
+      "framework": {
+        "title": "约到心仪的人的秘密，从改变身材开始",
+        "open": "你说你约不到心仪的人，其实问题可能在这里。",
+        "problem": "不是你不够优秀，而是你的身材还没有传递出自信的信号。身材改变，气场就变，吸引力就提升。",
+        "turning_point": "对于我们邪修来说，这就是一个秘法的事儿。",
+        "solution": "[胸肌和肩部的快速成形秘法]，21天就有明显效果。",
+        "cta": "你就这样做，下次你说的话都更有份量，约人也更有底气。"
+      },
+      "pain_points": ["社交困难", "约不到人"],
+      "personality_traits": ["直白", "现实", "有效"],
+      "expected_metrics": {
+        "likes": "70K-100K",
+        "comments": "1500-2000",
+        "shares": "10000-15000"
+      },
+      "copywriter_params": {
+        "topic": "身材改变如何提升社交成功率",
+        "brief": "直言不讳地指出社交困难与身材的关系，提供具体的快速秘法，强化时间承诺。",
+        "tone": "直白、现实、赋能",
+        "key_phrases": ["约人", "自信", "秘法", "气场", "邪修"],
+        "avoid_phrases": ["保证成功", "所有人都", "医学改变"],
+        "target_audience": "单身或追求提升社交成功率的人"
+      }
+    },
+    {
+      "id": "PC-011",
+      "title": "代谢问题的宗门解决方案，不挨饿也能瘦",
+      "dimension": "health",
+      "body_category": "腹肌/核心",
+      "platform": "douyin",
+      "hook_type": "反问梗式",
+      "cta_type": "效果承诺型",
+      "pillar": "training",
+      "framework": {
+        "title": "代谢问题的宗门解决方案，不挨饿也能瘦",
+        "open": "代谢差？狗都不_！邪修有秘法。",
+        "problem": "很多人代谢差，不是因为你吃得多，而是你的核心肌群太弱。核心无力，代谢就下降，脂肪就堆积。",
+        "turning_point": "对于我们邪修来说，代谢问题就是一个秘法的事儿。",
+        "solution": "[核心激活秘法]，每天10分钟，你的代谢就能恢复正常。",
+        "cta": "你就这样做，一周你就能感受到身体的改变，二周就有明显效果。"
+      },
+      "pain_points": ["代谢困难", "减肥瓶颈"],
+      "personality_traits": ["科学", "有效", "快速"],
+      "expected_metrics": {
+        "likes": "40K-65K",
+        "comments": "700-1000",
+        "shares": "5000-8000"
+      },
+      "copywriter_params": {
+        "topic": "核心肌群与代谢的深层关系",
+        "brief": "将代谢问题根本归因于核心肌群，提供秘法式的快速解决方案，强调不需要节食。",
+        "tone": "科学、有效、快速",
+        "key_phrases": ["代谢", "秘法", "不挨饿", "核心", "邪修"],
+        "avoid_phrases": ["医学改变", "保证瘦", "快速减肥"],
+        "target_audience": "代谢困难、想减肥但不想节食的人"
+      }
+    },
+    {
+      "id": "PC-012",
+      "title": "【上班族康复】腰痛、颈椎、疲劳...一个秘法全解决",
+      "dimension": "health",
+      "body_category": "体态纠正/核心",
+      "platform": "xiaohongshu",
+      "hook_type": "陈述式",
+      "cta_type": "行动指引型",
+      "pillar": "training",
+      "framework": {
+        "title": "【上班族康复】腰痛、颈椎、疲劳...一个秘法全解决",
+        "open": "上班族最大的困扰：腰痛、颈椎、疲劳，往往都来自同一个根源。",
+        "problem": "长期久坐导致核心力量下降，脊椎失去支撑，肌肉紧张，代谢下降。结果就是一连串的身体问题。",
+        "turning_point": "但这一切都可以通过一个秘法改善。",
+        "solution": "[针对上班族的核心激活秘法]，每天15分钟，改善所有这些问题。",
+        "cta": "保存这个秘法，坚持2周，你就能感受到身体的彻底改变。"
+      },
+      "pain_points": ["亚健康", "疼痛困扰"],
+      "personality_traits": ["关怀", "系统", "实用"],
+      "expected_metrics": {
+        "saves": "2000-2500",
+        "likes": "4000-5000",
+        "comments": "600-800"
+      },
+      "copywriter_params": {
+        "topic": "核心力量对上班族亚健康的系统改善",
+        "brief": "分析上班族的多重亚健康问题都源于核心力量不足，提供一套综合的秘法，强调系统性解决。",
+        "tone": "关怀、系统、支持",
+        "key_phrases": ["上班族", "秘法", "腰痛", "核心", "康复"],
+        "avoid_phrases": ["治疗", "医学改变", "完全消除"],
+        "target_audience": "长期久坐的上班族，特别是有亚健康困扰的人"
+      }
+    },
+    {
+      "id": "PC-013",
+      "title": "颈椎腰椎的终极秘法，宗主20年的训练心得",
+      "dimension": "health",
+      "body_category": "体态纠正",
+      "platform": "douyin",
+      "hook_type": "陈述式",
+      "cta_type": "效果承诺型",
+      "pillar": "training",
+      "framework": {
+        "title": "颈椎腰椎的终极秘法，宗主20年的训练心得",
+        "open": "颈椎、腰椎问题？对于我们邪修来说，这就是一个秘法的事儿。",
+        "problem": "很多人颈椎和腰椎疼痛，都是因为核心力量不足，肌肉失衡。长期这样，问题会越来越严重。",
+        "turning_point": "宗主20年的训练经验，总结出一套终极秘法。",
+        "solution": "[详细的颈椎腰椎改善秘法]，3周就能有明显缓解。",
+        "cta": "你就这样做，脊椎问题就能彻底改善。"
+      },
+      "pain_points": ["脊椎疼痛", "生活质量下降"],
+      "personality_traits": ["权威", "经验", "可靠"],
+      "expected_metrics": {
+        "likes": "35K-55K",
+        "comments": "600-900",
+        "shares": "4000-6000"
+      },
+      "copywriter_params": {
+        "topic": "宗主20年经验的脊椎健康秘法",
+        "brief": "强化宗主的经验和权威，提供针对性的脊椎改善方案，承诺明确的改善时间。",
+        "tone": "权威、经验丰富、可靠",
+        "key_phrases": ["秘法", "20年", "宗主", "脊椎", "终极"],
+        "avoid_phrases": ["治疗", "医学证明", "完全治愈"],
+        "target_audience": "有脊椎问题的中年人和上班族"
+      }
+    },
+    {
+      "id": "PC-014",
+      "title": "整体蜕变的44天计划，从财务+心理+社交的三维突破",
+      "dimension": "integrated",
+      "body_category": "综合",
+      "platform": "xiaohongshu",
+      "hook_type": "陈述式",
+      "cta_type": "行动指引型",
+      "pillar": "training",
+      "framework": {
+        "title": "整体蜕变的44天计划，从财务+心理+社交的三维突破",
+        "open": "如果只是改变身体，那太浪费了。更重要的是改变你整个人的气场、机会、关系。",
+        "problem": "很多人卡在某一个维度的困境里：要么工作没起色，要么自信缺失，要么社交困难。其实这些都能通过身体改变来突破。",
+        "turning_point": "宗主设计的这个44天计划，就是要在三个维度同时实现蜕变。",
+        "solution": "[详细的44天三维蜕变计划]，每一周都有明确的目标和期望，涵盖财务、心理、社交的改变。",
+        "cta": "保存这个计划，跟着宗主44天，你就能经历一场完整的人生蜕变。"
+      },
+      "pain_points": ["多维困顿", "需要系统解决"],
+      "personality_traits": ["系统", "整体", "赋能"],
+      "expected_metrics": {
+        "saves": "2500-3000",
+        "likes": "5000-6000",
+        "comments": "700-1000"
+      },
+      "copywriter_params": {
+        "topic": "44天三维蜕变的完整系统",
+        "brief": "展示如何通过身体改变在财务、心理、社交三个维度同时实现蜕变，强调系统性和整体性。",
+        "tone": "系统、整体、赋能",
+        "key_phrases": ["蜕变", "44天", "三维", "秘法", "邪修"],
+        "avoid_phrases": ["保证成功", "100%改变", "所有人都"],
+        "target_audience": "追求全面改变和人生蜕变的人"
+      }
+    }
+  ],
+  "publishing_schedule": {
+    "day_1": ["PC-001", "PC-005", "PC-008"],
+    "day_2": ["PC-002", "PC-009"],
+    "day_3": ["PC-003", "PC-006", "PC-010"],
+    "day_4": ["PC-011", "PC-004"],
+    "day_5": ["PC-007", "PC-012"],
+    "day_6": ["PC-013"],
+    "day_7": ["PC-014"]
+  },
+  "verification_checklist": {
+    "personality_consistency": "每条文案是否都体现了邪修宗的4个支柱（权威感、差异化、可靠性、亲近感）",
+    "pain_point_clarity": "每条文案的痛点是否清晰、与目标用户相关、有共鸣",
+    "framework_completeness": "每条文案是否都包含6层结构（标题、开篇、问题、转折、方案、CTA）",
+    "copywriter_compatibility": "每条文案的参数配置是否能被CopywriterAgent正确理解和执行"
+  }
+}
