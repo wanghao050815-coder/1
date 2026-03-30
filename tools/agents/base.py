@@ -27,11 +27,38 @@ class BaseAgent:
         "coach_standards": "文档/会员服务/训练标准.md",
     }
 
-    def __init__(self, model: str = None):
+    def __init__(self, model: str = None, account_id: str = None):
         self.client = Anthropic()
         self.model = model or os.getenv("AGENT_MODEL", "claude-sonnet-4-20250514")
         self.repo_root = REPO_ROOT
         self._doc_cache: dict[str, str] = {}
+
+        # 账号上下文支持（B1、B2、B3...）
+        self.account_id = account_id or os.getenv("ACCOUNT_ID", "B1")
+        self._setup_account_paths()
+
+    def _setup_account_paths(self):
+        """为当前账号设置隔离的数据路径"""
+        # 账号数据目录树
+        self.account_data_root = self.repo_root / "数据" / "accounts" / self.account_id
+        self.account_copy_dir = self.account_data_root / "文案"
+        self.account_copy_drafts = self.account_copy_dir / "草稿"
+        self.account_copy_published = self.account_copy_dir / "已发布"
+        self.account_copy_library = self.account_copy_dir / "素材库"
+        self.account_copy_golden = self.account_copy_dir / "金句库"
+
+        self.account_ops_dir = self.account_data_root / "运营"
+        self.account_ops_kpi = self.account_ops_dir / "KPI"
+        self.account_ops_schedule = self.account_ops_dir / "排期"
+
+        self.account_analytics_dir = self.account_data_root / "分析"
+        self.account_analytics_metrics = self.account_analytics_dir / "指标"
+        self.account_analytics_reports = self.account_analytics_dir / "报告"
+        self.account_analytics_insights = self.account_analytics_dir / "洞察"
+
+        self.account_agency_dir = self.account_data_root / "代运营"
+        self.account_agency_deliverables = self.account_agency_dir / "交付物"
+        self.account_agency_weekly_reports = self.account_agency_dir / "周报"
 
     # ── 文档加载 ────────────────────────────────────────
 
@@ -181,8 +208,16 @@ class BaseAgent:
     # ── 工具方法 ──────────────────────────────────────
 
     def save_draft(self, content: str, metadata: dict, filename: str = None) -> Path:
-        """保存文案草稿到 data/copywriting/drafts/。"""
-        drafts_dir = self.repo_root / "数据" / "文案" / "草稿"
+        """保存文案草稿到账号专属目录。
+
+        优先使用账号特定的路径 /数据/accounts/{account_id}/文案/草稿/
+        如果路径不存在，降级到全局路径 /数据/文案/草稿/
+        """
+        # 优先使用账号特定路径
+        drafts_dir = self.account_copy_drafts
+        if not self.account_copy_drafts.exists():
+            # 降级到全局路径（用于单账号模式）
+            drafts_dir = self.repo_root / "数据" / "文案" / "草稿"
         drafts_dir.mkdir(parents=True, exist_ok=True)
 
         if not filename:
