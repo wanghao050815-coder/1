@@ -1,0 +1,178 @@
+{
+  "campaign": {
+    "name": "邪修宗14条文案计划",
+    "date": "2025-07-01 ~ 2025-07-14",
+    "generated_at": "2026-03-30T07:32:26.249947"
+  },
+  "statistics": {
+    "total": 14,
+    "generated": 14
+  },
+  "framework_info": {
+    "selection_logic": "13条按运营支柱配比 + 1条健身+心理学蓝海项目",
+    "pillars": [
+      "training",
+      "nutrition",
+      "lifestyle",
+      "trending",
+      "ip",
+      "psychology"
+    ]
+  },
+  "copies": [
+    {
+      "id": "OC-001",
+      "title": "春天跑步膝盖疼？90%的人忽略了这个热身动作",
+      "pillar": "training",
+      "platform": "douyin",
+      "body_category": "运动康复",
+      "hook_type": "痛点+数字",
+      "cta_type": "行动鼓励型",
+      "data_reason": "高赞训练内容优先选择痛点型 + 具体数字(90%的人)，引发焦虑后给解决方案",
+      "file": "数据/文案/草稿/OC-001.md"
+    },
+    {
+      "id": "OC-002",
+      "title": "你的体态问题，可能不是驼背，而是圆肩",
+      "pillar": "training",
+      "platform": "douyin",
+      "body_category": "体态纠正",
+      "hook_type": "反常识",
+      "cta_type": "行动鼓励型",
+      "data_reason": "反常识钩子在高赞训练内容中出现频率高，3秒自测+对比强烈",
+      "file": "数据/文案/草稿/OC-002.md"
+    },
+    {
+      "id": "OC-003",
+      "title": "居家5分钟晨练流程｜不需要任何器械，起床就能练",
+      "pillar": "training",
+      "platform": "xiaohongshu",
+      "body_category": "综合训练",
+      "hook_type": "完整方案型",
+      "cta_type": "收藏导向",
+      "data_reason": "小红书用户偏好完整跟练视频，收藏率是互动指标",
+      "file": "数据/文案/草稿/OC-003.md"
+    },
+    {
+      "id": "OC-004",
+      "title": "清明假期在家练｜一副哑铃搞定全身训练（跟练版）",
+      "pillar": "training",
+      "platform": "bilibili",
+      "body_category": "全身训练",
+      "hook_type": "完整训练版",
+      "cta_type": "投币收藏导向",
+      "data_reason": "B站用户追求深度内容，完整跟练视频在B站表现好",
+      "file": "数据/文案/草稿/OC-004.md"
+    },
+    {
+      "id": "OC-005",
+      "title": "动作控制不到位，做再多也白搭｜这是90%人的问题",
+      "pillar": "training",
+      "platform": "douyin",
+      "body_category": "技巧进阶",
+      "hook_type": "痛点+数字",
+      "cta_type": "效果承诺型",
+      "data_reason": "痛点+数字是高赞组合，指出常见错误引发共鸣",
+      "file": "数据/文案/草稿/OC-005.md"
+    },
+    {
+      "id": "OC-006",
+      "title": "减脂期最容易踩的5个早餐坑，第3个我也犯过",
+      "pillar": "nutrition",
+      "platform": "douyin",
+      "body_category": "营养误区",
+      "hook_type": "痛点+数字+个人化",
+      "cta_type": "引起关注",
+      "data_reason": "误区纠正型内容在营养领域高频且有效，数字+个人故事提高可信度",
+      "file": "数据/文案/草稿/OC-006.md"
+    },
+    {
+      "id": "OC-007",
+      "title": "从120斤到105斤，我的饮食变化不是少吃而是换吃",
+      "pillar": "nutrition",
+      "platform": "bilibili",
+      "body_category": "饮食策略",
+      "hook_type": "数据对比+反常识",
+      "cta_type": "深度学习导向",
+      "data_reason": "B站用户喜欢深度分享，替换策略类内容在B站表现优异",
+      "file": "数据/文案/草稿/OC-007.md"
+    },
+    {
+      "id": "OC-008",
+      "title": "春天湿气重，健身人怎么吃？这3碗汤比蛋白粉还重要",
+      "pillar": "nutrition",
+      "platform": "weibo",
+      "body_category": "季节养生",
+      "hook_type": "季节热点+权威声明",
+      "cta_type": "配方分享",
+      "data_reason": "季节结合内容在微博表现好，热点+实用知识易传播",
+      "file": "数据/文案/草稿/OC-008.md"
+    },
+    {
+      "id": "OC-009",
+      "title": "3月健身复盘｜从0开始的第90天，体脂率变化全记录",
+      "pillar": "lifestyle",
+      "platform": "xiaohongshu",
+      "body_category": "数据对比",
+      "hook_type": "数据展示",
+      "cta_type": "互动引导型",
+      "data_reason": "小红书数据展示内容（身材对比、数据曲线）互动率最高，用户爱收藏和分享",
+      "file": "数据/文案/草稿/OC-009.md"
+    },
+    {
+      "id": "OC-010",
+      "title": "健身博主的真实一天｜训练·备餐·拍摄幕后全公开",
+      "pillar": "lifestyle",
+      "platform": "xiaohongshu",
+      "body_category": "生活vlog",
+      "hook_type": "生活展示+幕后",
+      "cta_type": "拉近距离型",
+      "data_reason": "vlog形式和幕后内容在小红书表现优异，拉近与粉丝距离",
+      "file": "数据/文案/草稿/OC-010.md"
+    },
+    {
+      "id": "OC-011",
+      "title": "假期结束收心指南｜如何用一次训练找回状态",
+      "pillar": "lifestyle",
+      "platform": "xiaohongshu",
+      "body_category": "过度指南",
+      "hook_type": "实用建议型",
+      "cta_type": "收藏导向",
+      "data_reason": "假期后的过度方案内容实用性高，用户会反复收藏",
+      "file": "数据/文案/草稿/OC-011.md"
+    },
+    {
+      "id": "OC-012",
+      "title": "清明踏青≠休息日｜户外徒步也是优质有氧，但你得这样走",
+      "pillar": "trending",
+      "platform": "douyin",
+      "body_category": "户外训练",
+      "hook_type": "反常识+热点",
+      "cta_type": "行动鼓励型",
+      "data_reason": "热点+反常识组合在高赞内容中高频出现，时间敏感性强",
+      "file": "数据/文案/草稿/OC-012.md"
+    },
+    {
+      "id": "OC-013",
+      "title": "4月夏日备战计划正式启动｜宗门弟子集合",
+      "pillar": "ip",
+      "platform": "weixin",
+      "body_category": "社群运营",
+      "hook_type": "宗门号召型",
+      "cta_type": "社群引导型",
+      "data_reason": "IP强化内容适合在私域(微信)发布，号召力强",
+      "file": "数据/文案/草稿/OC-013.md"
+    },
+    {
+      "id": "OC-014",
+      "title": "冠军是怎样炼成的｜健身中的心理学秘密，改变你的训练心态",
+      "pillar": "psychology",
+      "platform": "douyin",
+      "body_category": "心理学视角",
+      "hook_type": "心理冲突+启蒙型",
+      "cta_type": "思想转变型",
+      "data_reason": "蓝海创新: 健身+心理学在历史数据中未深入开发，新视角",
+      "file": "数据/文案/草稿/OC-014.md"
+    }
+  ]
+}
