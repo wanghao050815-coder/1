@@ -43,5 +43,50 @@
     "id": "bf0363a5",
     "created_at": "2026-03-26T10:20:37.115969",
     "updated_at": "2026-03-26T10:20:37.115981"
+  },
+  {
+    "title": "深蹲膝盖内扣的3个根本原因",
+    "platform": "douyin",
+    "pillar": "训练方法",
+    "status": "filming",
+    "scheduled_time": null,
+    "assignee": "博主",
+    "tags": [],
+    "growth_potential": "high",
+    "is_series": false,
+    "series_name": null,
+    "id": "2e2ec34d",
+    "created_at": "2026-06-17T09:37:49.545395",
+    "updated_at": "2026-06-17T09:38:17.716208"
+  },
+  {
+    "title": "减脂期一日三餐怎么吃",
+    "platform": "xiaohongshu",
+    "pillar": "营养饮食",
+    "status": "idea",
+    "scheduled_time": null,
+    "assignee": "策划",
+    "tags": [],
+    "growth_potential": "medium",
+    "is_series": false,
+    "series_name": null,
+    "id": "10818d01",
+    "created_at": "2026-06-17T09:37:53.648384",
+    "updated_at": "2026-06-17T09:37:53.648401"
+  },
+  {
+    "title": "90%的人平板支撑都做错了",
+    "platform": "douyin",
+    "pillar": "训练方法",
+    "status": "idea",
+    "scheduled_time": null,
+    "assignee": "博主",
+    "tags": [],
+    "growth_potential": "high",
+    "is_series": true,
+    "series_name": "动作纠错系列",
+    "id": "9770f916",
+    "created_at": "2026-06-17T09:37:57.764533",
+    "updated_at": "2026-06-17T09:37:57.764551"
   }
 ]
