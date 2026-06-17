@@ -4,6 +4,16 @@
 
 我们是一支专注于健身与健康生活方式的内容创作团队，致力于通过科学、真实、有温度的内容，帮助每一位关注者建立可持续的健康习惯。我们相信，改变体型只是起点，真正的目标是让「健康」成为每个人生活方式的一部分。团队以「宗门」文化为核心，用内容连接志同道合的人，用数据驱动持续进化，用系统保障稳定输出。
 
+## 🎯 增长目标：100万 → 300万粉丝
+
+```
+当前：███████████░░░░░░░░░░░░░░░░░░░ 100万 / 300万（33%）
+
+Phase 1（100→150万）：夯实爆款公式，主力平台稳定产出
+Phase 2（150→220万）：多平台放量，合拍引流，矩阵号联动
+Phase 3（220→300万）：IP破圈，直播+私域双引擎
+```
+
 ---
 
 ## 系统全景：三层架构
@@ -43,6 +53,9 @@
 | 我是数据分析师               | [数据分析师入职](docs/team/onboarding/data-analyst.md)      |
 | 我是社群运营                 | [社群运营入职](docs/team/onboarding/community-manager.md)   |
 | 查看本周数据复盘             | [Issues → analytics 标签](../../issues?label=analytics)     |
+| 查看增长目标和阶段策略       | [KPI配置](tools/config/kpis.yaml)（增长阶段 + 三级目标体系）|
+| 查看抖音增长策略             | [抖音运营手册](docs/platforms/douyin-playbook.md)（含直播/爆款/合拍策略） |
+| 使用内容日历工具             | `python -m tools.content_calendar.cli --help`               |
 | 配置 GitHub Projects 看板   | [项目看板配置指南](.github/PROJECT_CONFIG.md)                |
 | 报告一个工具故障或流程问题   | [创建 Bug Report Issue](.github/ISSUE_TEMPLATE/bug-report.yml) |
 
@@ -55,13 +68,24 @@
 ├── README.md                          # 本文件：导航中心
 ├── .github/
 │   ├── workflows/
-│   │   └── weekly-digest.yml         # 每周自动创建数据复盘Issue
+│   │   └── weekly-digest.yml         # 每周自动创建数据复盘Issue（含增长进度）
 │   ├── ISSUE_TEMPLATE/
-│   │   ├── content-request.yml       # 内容创意申请
-│   │   ├── weekly-review.yml         # 每周数据复盘
+│   │   ├── content-request.yml       # 内容创意申请（含增长潜力评估）
+│   │   ├── weekly-review.yml         # 每周数据复盘（含爆款分析+增长实验）
 │   │   └── bug-report.yml            # 故障/流程问题报告
 │   └── PROJECT_CONFIG.md             # GitHub Projects 配置指南
+├── tools/
+│   ├── config/
+│   │   ├── team.yaml                 # 团队配置（角色/权限/协作节奏/增长目标）
+│   │   ├── platforms.yaml            # 6大平台规格+增长策略+对标账号
+│   │   └── kpis.yaml                 # 三级KPI体系+增长阶段+里程碑
+│   ├── content_calendar/
+│   │   ├── __init__.py               # 内容日历模块（排期/冲突检测/统计）
+│   │   └── cli.py                    # CLI工具：view/add/status/conflicts/export/stats
+│   └── requirements.txt              # Python 依赖
 └── docs/
+    ├── platforms/
+    │   └── douyin-playbook.md        # 抖音运营手册（含直播/爆款/合拍/SEO策略）
     ├── brand/
     │   ├── brand-voice-guide.md      # 品牌声音与写作规范
     │   ├── visual-identity.md        # 视觉识别标准
@@ -77,6 +101,14 @@
             ├── data-analyst.md       # 数据分析师入职路径
             └── community-manager.md  # 社群运营入职路径
 ```
+
+## 团队会议节奏速查
+
+| 时间 | 会议 | 参与人 | 目的 |
+|------|------|--------|------|
+| 周一 10:00 | 选题会 | 全员 | 确定本周排期 + 复盘上周增长 + 确认增长实验 |
+| 周三 14:00 | 素材交接 | 策划→剪辑 | 脚本交付 + 素材需求确认 |
+| 周五 15:00 | 数据复盘 | 全员 | 周数据汇报 + 爆款拆解 + 调整策略 |
 
 ---
 
@@ -113,4 +145,4 @@ cp .env.example .env && open .env
 ---
 
 *本文件由团队系统自动维护。如需修改，请通过 PR 提交，经内容总监审批后合并。*
-*最后更新：[更新日期] | 维护人：[内容总监姓名]*
+*最后更新：2026-03-25 | 维护人：[内容总监姓名]*

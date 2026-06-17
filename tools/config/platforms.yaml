@@ -1,3 +1,8 @@
+# ============================================================
+# 平台配置 — 6大平台规格 + 增长策略
+# 服务于「100万→300万粉丝」增长目标
+# ============================================================
+
 platforms:
   douyin:
     name_zh: "抖音"
@@ -5,12 +10,41 @@ platforms:
     handle: "[账号ID]"
     url: "[主页链接]"
     api_enabled: false
+    priority: "主力"  # 主力 / 辅助 / 试验
+    current_followers: 500000
+    target_followers: 1500000
+    growth_strategy: "完播率驱动推流 → 爆款复制放量 → 直播涨粉加速"
+    core_growth_lever: "completion_rate"  # 该平台最影响增长的核心指标
+
     posting_times_cst:
       - "07:00"
       - "12:00"
       - "18:00"
       - "21:00"
     max_hashtags: 20
+
+    content_format_weights:
+      short_video: 0.70    # 短视频占比70%（核心涨粉引擎）
+      livestream: 0.20     # 直播占比20%（粉丝粘性+转化）
+      image_text: 0.10     # 图文占比10%（补充内容）
+
+    cross_post_rules:
+      from_bilibili: "需裁剪为竖版，时长控制在60s内，去除B站专属梗"
+      from_xiaohongshu: "可直接使用竖版视频，需替换话题标签"
+      to_tiktok: "内容可直接分发，需翻译字幕"
+
+    content_shelf_life_hours: 48  # 内容有效推荐时间窗口
+    benchmark_accounts:
+      - name: "[对标账号1]"
+        followers: "300万+"
+        reference: "爆款选题风格参考"
+      - name: "[对标账号2]"
+        followers: "200万+"
+        reference: "封面设计和钩子参考"
+      - name: "[对标账号3]"
+        followers: "500万+"
+        reference: "直播涨粉策略参考"
+
     video_specs:
       max_duration_seconds: 600
       max_file_size_mb: 4096
@@ -30,12 +64,41 @@ platforms:
     handle: "[账号ID]"
     url: "[主页链接]"
     api_enabled: false
+    priority: "主力"
+    current_followers: 200000
+    target_followers: 600000
+    growth_strategy: "收藏率驱动搜索推荐 → 干货图文沉淀长尾流量 → 笔记SEO获取搜索流"
+    core_growth_lever: "save_rate"
+
     posting_times_cst:
       - "07:30"
       - "12:30"
       - "18:30"
       - "22:00"
     max_hashtags: 30
+
+    content_format_weights:
+      image_text: 0.50     # 图文笔记是小红书核心
+      short_video: 0.40    # 视频笔记增长迅速
+      livestream: 0.10
+
+    cross_post_rules:
+      from_douyin: "需重新配文案（种草风格），添加小红书热门话题"
+      from_weibo: "长文可拆分为图文笔记系列"
+      unique_content: "食谱类、购物清单类内容优先在小红书首发"
+
+    content_shelf_life_hours: 720  # 小红书内容长尾效应强，可持续30天
+    benchmark_accounts:
+      - name: "[对标账号1]"
+        followers: "200万+"
+        reference: "图文排版和封面参考"
+      - name: "[对标账号2]"
+        followers: "100万+"
+        reference: "健身食谱类笔记参考"
+      - name: "[对标账号3]"
+        followers: "300万+"
+        reference: "SEO选题策略参考"
+
     video_specs:
       max_duration_seconds: 900
       max_file_size_mb: 1024
@@ -56,12 +119,35 @@ platforms:
     handle: "[账号ID]"
     url: "[主页链接]"
     api_enabled: false
+    priority: "辅助"
+    current_followers: 150000
+    target_followers: 400000
+    growth_strategy: "热搜借势获取曝光 → 互动话题引发转发裂变 → 超话社区沉淀核心粉"
+    core_growth_lever: "repost_rate"
+
     posting_times_cst:
       - "08:00"
       - "12:00"
       - "17:00"
       - "20:00"
     max_hashtags: 10
+
+    content_format_weights:
+      short_text: 0.40     # 短文/热点评论
+      short_video: 0.35    # 视频微博
+      image_text: 0.15     # 图文
+      livestream: 0.10
+
+    cross_post_rules:
+      from_douyin: "可直接分享视频链接，或上传原版视频"
+      unique_content: "热点事件评论、健身圈新闻类内容优先在微博首发"
+
+    content_shelf_life_hours: 12  # 微博内容时效性强
+    benchmark_accounts:
+      - name: "[对标账号1]"
+        followers: "500万+"
+        reference: "热点借势和话题运营参考"
+
     video_specs:
       max_duration_seconds: 3600
       max_file_size_mb: 2048
@@ -82,12 +168,38 @@ platforms:
     handle: "[账号ID]"
     url: "[主页链接]"
     api_enabled: false
+    priority: "主力"
+    current_followers: 100000
+    target_followers: 300000
+    growth_strategy: "长视频深度内容建立专业人设 → 投币收藏率驱动推荐 → 弹幕文化强化粉丝粘性"
+    core_growth_lever: "coin_rate"
+
     posting_times_cst:
       - "10:00"
       - "14:00"
       - "19:00"
       - "21:30"
     max_hashtags: 12
+
+    content_format_weights:
+      long_video: 0.50     # B站核心：5-15分钟深度内容
+      short_video: 0.30    # 短视频做流量补充
+      livestream: 0.15
+      column_article: 0.05 # 专栏文章
+
+    cross_post_rules:
+      from_douyin: "短视频可上传但效果一般，建议重新剪辑为3-5分钟版本"
+      unique_content: "训练原理详解、科学辟谣、装备测评优先在B站首发"
+
+    content_shelf_life_hours: 2160  # B站内容长尾极强，可持续90天
+    benchmark_accounts:
+      - name: "[对标账号1]"
+        followers: "200万+"
+        reference: "深度教学内容和弹幕互动参考"
+      - name: "[对标账号2]"
+        followers: "100万+"
+        reference: "科学健身科普风格参考"
+
     video_specs:
       max_duration_seconds: 14400
       max_file_size_mb: 8192
@@ -107,11 +219,33 @@ platforms:
     handle: "[账号ID]"
     url: "[主页链接]"
     api_enabled: false
+    priority: "辅助"
+    current_followers: 30000
+    target_followers: 100000
+    growth_strategy: "视频号+公众号联动 → 私域社群沉淀铁粉 → 朋友圈分享裂变"
+    core_growth_lever: "open_rate"
+
     posting_times_cst:
       - "08:00"
       - "12:00"
       - "20:00"
     max_hashtags: 0
+
+    content_format_weights:
+      video_channel: 0.50  # 视频号
+      article: 0.30        # 公众号推文
+      livestream: 0.20
+
+    cross_post_rules:
+      from_douyin: "视频号可直接发布竖版视频"
+      unique_content: "深度长文、训练计划PDF、会员专属内容优先通过公众号"
+
+    content_shelf_life_hours: 168  # 公众号推文约7天有效期
+    benchmark_accounts:
+      - name: "[对标账号1]"
+        followers: "50万+"
+        reference: "公众号+视频号联动参考"
+
     video_specs:
       max_duration_seconds: 3600
       max_file_size_mb: 2048
@@ -124,3 +258,48 @@ platforms:
         - jpg
         - png
         - gif
+
+  tiktok:
+    name_zh: "TikTok"
+    name_en: "TikTok"
+    handle: "[账号ID]"
+    url: "[主页链接]"
+    api_enabled: false
+    priority: "试验"
+    current_followers: 20000
+    target_followers: 100000
+    growth_strategy: "抖音爆款内容翻译分发 → 测试海外健身受众反馈 → 逐步本地化"
+    core_growth_lever: "completion_rate"
+
+    posting_times_utc:
+      - "13:00"  # 美东早8点
+      - "17:00"  # 美东中午12点
+      - "01:00"  # 美东晚8点
+    max_hashtags: 30
+
+    content_format_weights:
+      short_video: 0.90
+      livestream: 0.10
+
+    cross_post_rules:
+      from_douyin: "去除中文字幕，添加英文字幕，保留原视频"
+      unique_content: "暂无，以抖音内容翻译分发为主"
+
+    content_shelf_life_hours: 72
+    benchmark_accounts:
+      - name: "[对标账号1]"
+        followers: "1M+"
+        reference: "海外健身博主内容风格参考"
+
+    video_specs:
+      max_duration_seconds: 600
+      max_file_size_mb: 2048
+      recommended_resolution: "1080x1920"
+      frame_rate: 60
+    image_specs:
+      ratio: "9:16"
+      max_file_size_mb: 20
+      formats:
+        - jpg
+        - png
+        - webp

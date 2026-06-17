@@ -116,12 +116,70 @@ body:
     validations:
       required: false
 
+  - type: dropdown
+    id: growth-potential
+    attributes:
+      label: 增长潜力预判
+      description: |
+        预估此内容的涨粉潜力，基于：话题热度、痛点强度、视觉冲击力、可复制性
+      options:
+        - 高潜力（爆款候选：强痛点+高热度+视觉冲击力强）
+        - 中潜力（稳定内容：符合支柱定位，预期正常表现）
+        - 低潜力（填充内容：保持更新频率，不期望爆发）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: series-type
+    attributes:
+      label: 系列化潜力
+      description: 系列内容对粉丝留存和回访有显著作用，适合做系列的内容优先级更高
+      options:
+        - 独立内容（不属于任何系列）
+        - 新系列第一集（计划后续3集以上）
+        - 已有系列续集（请在补充说明中注明系列名）
+        - 可能做系列但尚未确定
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: cross-platform
+    attributes:
+      label: 多平台分发计划
+      description: 勾选计划分发的平台（主平台已在上方选择）
+      options:
+        - label: "抖音 — 需裁剪/调整"
+        - label: "小红书 — 需重写种草风格文案"
+        - label: "B站 — 需剪辑为3-5分钟深度版本"
+        - label: "微博 — 直接分发或提取金句"
+        - label: "微信视频号 — 直接分发"
+        - label: "TikTok — 需添加英文字幕"
+
+  - type: dropdown
+    id: paid-promotion
+    attributes:
+      label: 付费推广计划
+      description: 是否计划配合DOU+/薯条等付费推广？高潜力内容建议预留投放预算
+      options:
+        - 不投放
+        - 小额测试（100-300元，观察数据后决定）
+        - 中等投放（300-1000元，已验证的爆款公式）
+        - 大额投放（1000元以上，需博主审批）
+        - 待定（根据发布后24小时数据决定）
+    validations:
+      required: false
+
   - type: textarea
     id: additional-notes
     attributes:
       label: 补充说明（可选）
       description: 任何其他你想让团队知道的信息
-      placeholder: 例：这个创意可以和下周的直播联动，或者可以做成系列。
+      placeholder: |
+        例：
+        - 这个创意可以和下周的直播联动
+        - 属于「XX」系列第3集
+        - 品牌合作内容，合同交付截止日：YYYY-MM-DD
+        - 有合拍/连线机会：@某博主
       render: markdown
     validations:
       required: false
@@ -136,4 +194,6 @@ body:
         - label: 我已查阅品牌声音指南，此内容不涉及医疗建议或夸大效果
           required: true
         - label: 我已检查近30天发布记录，此选题近期未被重复发布
+          required: false
+        - label: 如为高增长潜力内容，我已评估其爆款要素（强钩子+高完播潜力+引发互动）
           required: false

@@ -1,26 +1,51 @@
+# ============================================================
+# 团队配置 — 服务于「100万→300万粉丝」增长目标
+# ============================================================
+
+growth_target:
+  total_followers_current: 1000000
+  total_followers_goal: 3000000
+  target_date: "2027-06-30"
+  phases:
+    - name: "Phase 1: 夯实根基"
+      range: "100万→150万"
+      focus: "找到爆款公式，主力平台稳定产出"
+    - name: "Phase 2: 多平台放量"
+      range: "150万→220万"
+      focus: "跨平台分发，矩阵号联动，合拍引流"
+    - name: "Phase 3: IP破圈"
+      range: "220万→300万"
+      focus: "直播+私域双引擎，品牌合作提升曝光"
+
 team:
   members:
     - name: "创作者"
       role: "creator"
       github_username: "[github_username]"
+      capacity_per_week: 3  # 每周出镜内容数上限
       notify_on:
         - escalation
         - sensitive_comment
         - kpi_alert
         - milestone_complete
+        - viral_content  # 出现爆款时通知
 
     - name: "内容策划"
       role: "content_strategist"
       github_username: "[github_username]"
+      capacity_per_week: 8  # 每周可产出brief/脚本数
+      platform_owner: ["douyin", "bilibili"]  # 主要负责的平台增长
       notify_on:
         - new_brief_needed
         - content_approved
         - weekly_plan_ready
         - trend_signal
+        - viral_content
 
     - name: "视频剪辑"
       role: "video_editor"
       github_username: "[github_username]"
+      capacity_per_week: 10  # 每周可完成视频数
       notify_on:
         - filming_complete
         - revision_requested
@@ -29,51 +54,95 @@ team:
     - name: "社区运营"
       role: "community_manager"
       github_username: "[github_username]"
+      capacity_per_week: 0  # 非内容产出岗，不计内容产能
+      platform_owner: ["xiaohongshu", "weibo", "wechat"]  # 负责这些平台的粉丝互动
       notify_on:
         - comment_batch_ready
         - escalation
         - ugc_detected
         - community_report_ready
+        - follower_milestone  # 粉丝里程碑（每增50万）
 
     - name: "数据分析"
       role: "data_analyst"
       github_username: "[github_username]"
+      capacity_per_week: 0
       notify_on:
         - weekly_data_ready
         - monthly_data_ready
         - outlier_detected
         - kpi_alert
+        - viral_content
 
 roles:
   creator:
-    description: "博主本人，负责出镜、最终审核、敏感内容处理"
+    description: "博主本人，负责出镜、最终审核、敏感内容处理、增长策略决策"
     permissions:
       - approve_all
       - handle_sensitive
       - set_kpi_targets
+      - approve_brand_collab
   content_strategist:
-    description: "负责选题策划、脚本撰写、内容日历管理"
+    description: "负责选题策划、脚本撰写、内容日历管理、爆款公式提炼"
     permissions:
       - manage_calendar
       - write_briefs
       - write_scripts
+      - analyze_viral_content
   video_editor:
-    description: "负责视频拍摄、剪辑、封面制作、素材管理"
+    description: "负责视频拍摄、剪辑、封面制作、素材管理、直播切片"
     permissions:
       - upload_assets
       - manage_assets
+      - create_clips  # 直播切片权限
   community_manager:
-    description: "负责日常评论回复、社区互动、粉丝关系维护"
+    description: "负责日常评论回复、社区互动、粉丝关系维护、私域引流"
     permissions:
       - reply_comments
       - triage_comments
       - escalate
+      - manage_fan_group  # 粉丝群管理
   data_analyst:
-    description: "负责数据收集、分析报告、趋势监控"
+    description: "负责数据收集、分析报告、趋势监控、增长实验追踪"
     permissions:
       - pull_analytics
       - generate_reports
       - manage_kpis
+      - track_experiments  # 增长实验追踪
+
+# 内容审批流 — 日常内容走快速通道，品牌合作需博主审批
+content_approval_flow:
+  regular_content:
+    chain: ["content_strategist", "publish"]
+    description: "日常内容由策划直接排期发布，无需博主逐条审批"
+  brand_collaboration:
+    chain: ["content_strategist", "creator", "publish"]
+    description: "品牌合作内容必须经博主审批"
+  sensitive_content:
+    chain: ["content_strategist", "creator", "publish"]
+    description: "涉及争议话题、健康声明、竞品提及的内容需博主审批"
+    examples:
+      - "涉及伤病恢复建议"
+      - "对比或提及其他博主"
+      - "营养补剂推荐"
+
+# 团队协作节奏
+team_rhythm:
+  monday:
+    - time: "10:00"
+      event: "选题会（全员）"
+      duration_min: 45
+      description: "确定本周内容排期，复盘上周增长数据，确认增长实验方向"
+  wednesday:
+    - time: "14:00"
+      event: "素材交接点（策划→剪辑）"
+      duration_min: 15
+      description: "策划交付本周脚本和拍摄大纲，剪辑确认素材需求"
+  friday:
+    - time: "15:00"
+      event: "数据复盘（全员）"
+      duration_min: 30
+      description: "数据分析师汇报本周数据，提炼爆款要素，调整下周策略"
 
 notification_channels:
   wecom_webhook: "[企业微信Webhook地址]"
@@ -82,3 +151,6 @@ notification_channels:
     info: ["wecom"]
     warning: ["wecom", "dingtalk"]
     critical: ["wecom", "dingtalk"]
+  milestone_notification:
+    description: "粉丝里程碑（每50万）全员庆祝通知"
+    channels: ["wecom", "dingtalk"]
